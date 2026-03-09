@@ -2,16 +2,21 @@ import React from "react";
 
 const IdealForYouSection = () => {
   return (
-    <section className="relative w-full bg-[#fdfdfd] pt-12 pb-24 overflow-hidden font-sans">
+    <section className="relative w-full bg-[#fdfdfd] pb-24 overflow-hidden font-sans">
       
-      {/* Top green marquee strip - placeholder for animation */}
-      <div className="w-full bg-[#a4e678] border-y border-slate-500 py-2.5 overflow-hidden whitespace-nowrap mb-16 relative flex items-center">
-        <div className="animate-[slide_15s_linear_infinite] inline-block text-slate-800 font-medium text-[22px] flex items-center gap-2">
-          <span>20% early bird discount is only available until 20 June</span>
-          <div className="w-[18px] h-[18px] rounded-full bg-gradient-to-br from-white to-[#a4e678] shadow-inner mx-2"></div>
-          <span>20% early bird discount is only available until 20 June</span>
-          <div className="w-[18px] h-[18px] rounded-full bg-gradient-to-br from-white to-[#a4e678] shadow-inner mx-2"></div>
-          <span>20% early bird discount is only available until 20 June</span>
+      {/* Top green marquee strip - seamless infinite animation */}
+      <div className="w-full bg-[#a4e678] border-y border-slate-500 py-3 overflow-hidden whitespace-nowrap mb-16 relative flex items-center">
+        <div className="animate-[slide_30s_linear_infinite] flex items-center flex-nowrap text-[#1e1e1e] font-medium text-[22px] w-max">
+          {[...Array(2)].map((_, i) => (
+            <div key={i} className="flex items-center flex-nowrap shrink-0">
+              {[...Array(6)].map((_, j) => (
+                <React.Fragment key={j}>
+                  <span className="whitespace-nowrap px-4">20% early bird discount is only available until 20 June</span>
+                  <div className="w-[18px] h-[18px] rounded-full bg-gradient-to-br from-[#badbad] to-[#609a47] shadow-inner flex-shrink-0 mx-2"></div>
+                </React.Fragment>
+              ))}
+            </div>
+          ))}
         </div>
       </div>
 

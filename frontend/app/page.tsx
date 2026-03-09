@@ -10,7 +10,7 @@ import SocialsFooterSection from "../components/SocialsFooterSection";
 
 export default function Home() {
   return (
-    <main className="flex flex-col gap-12 sm:gap-16 lg:gap-24 overflow-hidden bg-white">
+    <main className="flex flex-col overflow-hidden bg-[#0a0a0a]">
       <HeroSection />
       <CourseDetailsSection />
       <IdealForYouSection />
