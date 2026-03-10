@@ -175,7 +175,7 @@ const InstructorSection = () => {
       <div className="max-w-6xl mx-auto px-6 lg:px-8 relative z-20">
         
         {/* Top Part: Author Section */}
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-12 mb-32 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-12 mb-16 lg:mb-32 items-center">
           
           {/* Left: Author Image/Graphic */}
           <div className="relative w-full max-w-[450px] mx-auto lg:mx-0">
@@ -206,7 +206,7 @@ const InstructorSection = () => {
           <div className="flex flex-col relative">
             {/* Overlay wrapper to handle opacity transition nicely */}
             <div className={`flex flex-col transition-opacity duration-300 ${isTransitioning ? 'opacity-0' : 'opacity-100'}`}>
-              <h2 className="text-4xl lg:text-[46px] font-bold leading-[1.15] tracking-tight text-slate-900 mb-8">
+              <h2 className="text-3xl md:text-4xl lg:text-[46px] font-bold leading-[1.15] tracking-tight text-slate-900 mb-6 lg:mb-8">
                 <span className="text-[#511ae4] italic font-serif font-medium">{currentInstructor.role}</span><br />
                 {currentInstructor.course}
               </h2>
@@ -270,12 +270,12 @@ const InstructorSection = () => {
         </div>
 
         {/* Bottom Part: "Each student..." Section */}
-        <div ref={bottomSectionRef} className="mt-32 border-t border-slate-100 pt-16 min-h-screen flex flex-col justify-center relative">
+        <div ref={bottomSectionRef} className="mt-16 lg:mt-32 border-t border-slate-100 pt-12 lg:pt-16 min-h-0 lg:min-h-screen flex flex-col justify-center relative">
           <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 items-start w-full max-w-6xl mx-auto">
             
             {/* Left Content */}
-            <div className="lg:col-span-5 relative">
-              <h2 className="text-4xl md:text-[44px] lg:text-[50px] font-bold leading-[1.15] tracking-tight text-slate-900 mb-20 relative z-10">
+            <div className="lg:col-span-5 relative w-full">
+              <h2 className="text-3xl md:text-[44px] lg:text-[50px] font-bold leading-[1.15] tracking-tight text-slate-900 mb-10 lg:mb-20 relative z-10">
                 <span className="text-[#511ae4] italic font-serif font-medium">Each student</span> of the<br />
                 course <span className="text-[#511ae4] italic font-serif font-medium">will receive</span>
               </h2>
@@ -288,7 +288,7 @@ const InstructorSection = () => {
               </div>
 
               {/* Character Illustration Next to Text */}
-              <div className="absolute bottom-[-20%] right-[-10%] md:right-[10%] lg:right-[-20%] w-[120px] h-[250px] z-0 drop-shadow-2xl">
+              <div className="absolute bottom-[-10%] lg:bottom-[-20%] right-0 md:right-[10%] lg:right-[-20%] w-[100px] lg:w-[120px] h-[200px] lg:h-[250px] z-0 drop-shadow-2xl opacity-40 lg:opacity-100 pointer-events-none">
                 {/* Dummy placeholder for 3d character */}
                 <div className="w-16 h-20 bg-[#695d7f] rounded-[30px] absolute top-[20%] left-1/2 -translate-x-1/2 z-10"></div>
                 <div className="w-12 h-26 bg-[#7742e6] rounded-full absolute bottom-[10%] left-[20%] z-0 rotate-12"></div>
@@ -297,7 +297,7 @@ const InstructorSection = () => {
               </div>
 
               {/* Small floating icon Top Left */}
-              <div className="absolute -top-16 left-24 w-12 h-12 bg-gradient-to-br from-[#7742e6] to-[#4512d1] rounded-full shadow-lg flex items-center justify-center p-2 z-0">
+              <div className="absolute -top-8 lg:-top-16 right-4 lg:right-auto lg:left-24 w-12 h-12 bg-gradient-to-br from-[#7742e6] to-[#4512d1] rounded-full shadow-lg items-center justify-center p-2 z-0 hidden md:flex">
                 <div className="w-full h-full bg-[#a1bcf4] rounded -rotate-12 border border-white/50 flex flex-col gap-1 p-1">
                   <div className="w-full h-1 bg-white/60"></div>
                   <div className="w-full h-1 bg-white/60"></div>
@@ -323,7 +323,7 @@ const InstructorSection = () => {
               <div ref={scrollWrapperRef} className="lg:overflow-hidden w-full">
                 <div 
                   ref={scrollCardsRef} 
-                  className="flex gap-6 pb-8 px-4 lg:px-0 scrollbar-hide w-full lg:w-max overflow-x-auto lg:overflow-visible snap-x snap-mandatory lg:snap-none"
+                  className="flex gap-4 lg:gap-6 pb-8 px-2 lg:px-0 scrollbar-hide w-full lg:w-max overflow-x-auto lg:overflow-visible snap-x snap-mandatory lg:snap-none"
                 >
                   
                   {/* Mapping over benefits array to create cards */}

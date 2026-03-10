@@ -12,7 +12,7 @@ const RegistrationFormSection = () => {
   ];
 
   return (
-    <section className="relative w-full bg-[#fdfdfd] pb-24 font-sans">
+    <section className="relative w-full bg-[#fdfdfd] py-12 font-sans">
       
       {/* Top Banner Stripe */}
       <div className="w-full bg-[#511ae4] py-4 px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between z-10 relative mt-32">

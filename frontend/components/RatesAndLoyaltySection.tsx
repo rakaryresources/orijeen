@@ -1,7 +1,6 @@
 import React from "react";
 
 const RatesAndLoyaltySection = () => {
-  // Converted placeholder prices from UAH to INR (roughly multiplying by 2 for visual sake, or using representative Indian Rupee amounts for technical courses)
   const plans = [
     {
       id: "independent",
@@ -35,7 +34,7 @@ const RatesAndLoyaltySection = () => {
       ],
       price: "22,500 INR",
       note: "*The price includes 1 individual session at a cost of 3500 INR.",
-      highlighted: true, // This one has the green border in the design
+      highlighted: true,
     },
     {
       id: "individual",
@@ -55,7 +54,7 @@ const RatesAndLoyaltySection = () => {
   ];
 
   return (
-    <section className="relative w-full bg-[#fdfdfd] pt-24 pb-32 overflow-hidden font-sans border-t border-slate-100">
+    <section className="relative w-full bg-[#fdfdfd] py-24 overflow-hidden font-sans border-t border-slate-100">
       <div className="max-w-6xl mx-auto px-6 lg:px-8 relative z-20">
         
         {/* Header Section for Rates */}

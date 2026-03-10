@@ -2,45 +2,227 @@
 
 import React, { useState } from "react";
 
+const programsData = [
+  {
+    id: "business-analysis",
+    name: "Business Analysis",
+    days: "Mon; Thu",
+    time: "17:00-19:00",
+    seats: { left: 10, total: 32 },
+    modules: [
+      {
+        id: 1,
+        title: "Introduction to Business Analysis",
+        onlineLessons: 9,
+        homeworks: 8,
+        details: null,
+      },
+      {
+        id: 2,
+        title: "Business Analysis Techniques and Tools",
+        onlineLessons: 4,
+        homeworks: 4,
+        details: [
+          "Requirement Elicitation and Documentation.",
+          "Data Modeling and Analysis.",
+          "Process Modeling and Improvement.",
+          "Use of Various Analysis Tools and Software.",
+        ],
+      },
+      {
+        id: 3,
+        title: "Stakeholder Management and Communication",
+        onlineLessons: 4,
+        homeworks: 8,
+        details: null,
+      },
+      {
+        id: 4,
+        title: "Project Management for Business Analysts.\nDiploma project",
+        onlineLessons: 1,
+        homeworks: 8,
+        details: null,
+      },
+    ]
+  },
+  {
+    id: "data-science",
+    name: "Data Science & AI",
+    days: "Tue; Fri",
+    time: "18:30-20:30",
+    seats: { left: 5, total: 25 },
+    modules: [
+      {
+        id: 1,
+        title: "Python for Data Science",
+        onlineLessons: 12,
+        homeworks: 10,
+        details: [
+          "Introduction to Python programming.",
+          "Data manipulation with Pandas.",
+          "Data visualization with Matplotlib.",
+        ],
+      },
+      {
+        id: 2,
+        title: "Machine Learning Fundamentals",
+        onlineLessons: 8,
+        homeworks: 6,
+        details: null,
+      },
+      {
+        id: 3,
+        title: "Deep Learning & Neural Networks",
+        onlineLessons: 6,
+        homeworks: 5,
+        details: null,
+      },
+    ]
+  },
+  {
+    id: "product-design",
+    name: "Product Design (UI/UX)",
+    days: "Wed; Sat",
+    time: "10:00-12:00",
+    seats: { left: 12, total: 20 },
+    modules: [
+      {
+        id: 1,
+        title: "Design Principles & UX Research",
+        onlineLessons: 6,
+        homeworks: 4,
+        details: null,
+      },
+      {
+        id: 2,
+        title: "Wireframing & Prototyping in Figma",
+        onlineLessons: 8,
+        homeworks: 8,
+        details: [
+          "Creating low-fidelity wireframes.",
+          "Building interactive prototypes.",
+          "Design systems and components.",
+        ],
+      },
+      {
+        id: 3,
+        title: "Usability Testing & Final Project",
+        onlineLessons: 5,
+        homeworks: 3,
+        details: null,
+      },
+    ]
+  }
+];
+
+const ProgramIllustration = ({ programId }: { programId: string }) => {
+  if (programId === "business-analysis") {
+    return (
+      <div className="absolute top-0 right-0 w-[300px] h-[200px] hidden lg:block -translate-y-12 translate-x-12 z-0 animate-in fade-in zoom-in duration-500">
+         <div className="w-64 h-64 bg-gradient-to-br from-[#7742e6] to-[#4512d1] rounded-full absolute top-0 right-10"></div>
+         
+         {/* Fake UI window 1 */}
+         <div className="absolute top-[20%] right-16 w-48 h-32 bg-[#e9e3e3] rounded-xl shadow-xl transform rotate-[-8deg] overflow-hidden border border-white/40">
+            <div className="flex gap-1 p-2">
+              <div className="w-2 h-2 rounded-full bg-slate-300"></div>
+              <div className="w-2 h-2 rounded-full bg-slate-300"></div>
+              <div className="w-2 h-2 rounded-full bg-slate-300"></div>
+            </div>
+            {/* Fake image block inside window */}
+            <div className="absolute bottom-[-10px] right-[-10px] w-28 h-28 bg-[#a1ded5] rounded-[30%] rotate-12 opacity-80 mix-blend-multiply"></div>
+         </div>
+
+         {/* Fake floating object */}
+         <div className="absolute top-[80%] left-[-10px] w-12 h-12 bg-[#ed7f9b] rounded-lg shadow-lg rotate-12 flex items-center justify-center -translate-y-10 border border-white/20">
+           <div className="w-0 h-0 border-l-[15px] border-l-transparent border-b-[20px] border-b-white/30 border-r-[15px] border-r-transparent"></div>
+         </div>
+         
+         <div className="absolute top-[-20px] left-[50px] w-8 h-8 bg-[#eabe88] shadow-md border border-white/20"></div>
+
+         {/* Dark Blue Window / Card */}
+         <div className="absolute top-[40%] right-[-10px] w-40 h-28 bg-[#2d1b6e] rounded-xl shadow-2xl transform rotate-[12deg] p-4 border border-white/10 flex flex-col justify-center gap-3">
+            <div className="w-8 h-8 rounded-full border-[3px] border-[#fce096] flex items-center justify-center">
+              <div className="w-3 h-3 rounded-full bg-[#fce096]"></div>
+            </div>
+            <div className="w-8 h-1.5 bg-[#8ba1f3] rounded-full"></div>
+            <div className="w-16 h-1.5 bg-[#7742e6] rounded-full"></div>
+         </div>
+      </div>
+    );
+  }
+
+  if (programId === "data-science") {
+    return (
+      <div className="absolute top-0 right-0 w-[300px] h-[200px] hidden lg:block -translate-y-12 translate-x-12 z-0 animate-in fade-in zoom-in duration-500">
+         <div className="w-64 h-64 bg-gradient-to-br from-[#12cf97] to-[#0b9c71] rounded-full absolute top-0 right-10"></div>
+         
+         {/* Chart Window */}
+         <div className="absolute top-[20%] right-16 w-48 h-32 bg-white rounded-xl shadow-xl transform rotate-[5deg] overflow-hidden border border-white/40 p-4">
+            <div className="flex gap-2 items-end h-full pt-2">
+              <div className="w-full bg-[#e9e3e3] rounded-t-sm h-[30%] delay-75 animate-in slide-in-from-bottom duration-500"></div>
+              <div className="w-full bg-[#a1ded5] rounded-t-sm h-[70%] delay-150 animate-in slide-in-from-bottom duration-500"></div>
+              <div className="w-full bg-[#ed7f9b] rounded-t-sm h-[90%] delay-200 animate-in slide-in-from-bottom duration-500"></div>
+              <div className="w-full bg-[#7742e6] rounded-t-sm h-[50%] delay-300 animate-in slide-in-from-bottom duration-500"></div>
+            </div>
+         </div>
+
+         {/* Fake floating object */}
+         <div className="absolute top-[75%] left-[20px] w-14 h-14 bg-[#2d1b6e] rounded-full shadow-lg rotate-12 flex items-center justify-center border border-white/20">
+           <div className="w-6 h-6 border-[3px] border-[#a4e678] rounded-full"></div>
+         </div>
+         
+         {/* Code Card */}
+         <div className="absolute top-[50%] right-[-20px] w-36 h-24 bg-[#1e1e2f] rounded-xl shadow-2xl transform rotate-[-10deg] p-4 border border-white/10 flex flex-col justify-center gap-2">
+            <div className="w-12 h-2 bg-[#ed7f9b] rounded-full"></div>
+            <div className="w-20 h-2 bg-[#a1ded5] rounded-full"></div>
+            <div className="w-16 h-2 bg-[#a4e678] rounded-full"></div>
+         </div>
+      </div>
+    );
+  }
+
+  if (programId === "product-design") {
+    return (
+      <div className="absolute top-0 right-0 w-[300px] h-[200px] hidden lg:block -translate-y-12 translate-x-12 z-0 animate-in fade-in zoom-in duration-500">
+         <div className="w-64 h-64 bg-gradient-to-br from-[#ff7e5f] to-[#feb47b] rounded-full absolute top-0 right-10"></div>
+         
+         {/* Wireframe Window */}
+         <div className="absolute top-[15%] right-12 w-52 h-36 bg-[#f8f9fa] rounded-xl shadow-xl transform rotate-[-5deg] overflow-hidden border border-white/40 p-3 flex flex-col gap-2">
+            <div className="w-full h-1/2 bg-[#e9ecef] rounded-lg"></div>
+            <div className="flex gap-2 h-1/2">
+               <div className="w-1/2 h-full bg-[#e9ecef] rounded-lg"></div>
+               <div className="w-1/2 h-full bg-[#a1ded5] rounded-lg opacity-80"></div>
+            </div>
+         </div>
+
+         {/* Fake floating object */}
+         <div className="absolute top-[80%] right-[30px] w-12 h-12 bg-[#511ae4] rounded-xl shadow-lg transform rotate-45 border border-white/20 flex items-center justify-center">
+             <div className="w-4 h-4 bg-white rounded-full"></div>
+         </div>
+         
+         {/* Color Palette Card */}
+         <div className="absolute top-[35%] left-[-10px] w-24 h-32 bg-white rounded-xl shadow-2xl transform rotate-[15deg] p-2 border border-slate-100 flex flex-col gap-1.5">
+            <div className="w-full flex-1 bg-[#ff7e5f] rounded-md"></div>
+            <div className="w-full h-6 bg-[#2d1b6e] rounded-md"></div>
+            <div className="w-full h-6 bg-[#a1ded5] rounded-md"></div>
+         </div>
+      </div>
+    );
+  }
+
+  return null;
+};
+
 const ProgramSection = () => {
-  // State for Accordion - currently tracking which module is open
+  const [activeProgramId, setActiveProgramId] = useState(programsData[0].id);
   const [openModule, setOpenModule] = useState<number | null>(2);
 
-  const modules = [
-    {
-      id: 1,
-      title: "Introduction to Business Analysis",
-      onlineLessons: 9,
-      homeworks: 8,
-      details: null,
-    },
-    {
-      id: 2,
-      title: "Business Analysis Techniques and Tools",
-      onlineLessons: 4,
-      homeworks: 4,
-      details: [
-        "Requirement Elicitation and Documentation.",
-        "Data Modeling and Analysis.",
-        "Process Modeling and Improvement.",
-        "Use of Various Analysis Tools and Software.",
-      ],
-    },
-    {
-      id: 3,
-      title: "Stakeholder Management and Communication",
-      onlineLessons: 4,
-      homeworks: 8,
-      details: null,
-    },
-    {
-      id: 4,
-      title: "Project Management for Business Analysts.\nDiploma project",
-      onlineLessons: 1,
-      homeworks: 8,
-      details: null,
-    },
-  ];
+  const activeProgram = programsData.find(p => p.id === activeProgramId) || programsData[0];
+
+  const handleProgramSwitch = (id: string) => {
+    setActiveProgramId(id);
+    setOpenModule(null);
+  };
 
   const toggleModule = (id: number) => {
     setOpenModule(openModule === id ? null : id);
@@ -58,55 +240,43 @@ const ProgramSection = () => {
               <span className="text-[#511ae4] italic font-serif font-medium">Program</span> of the course
             </h2>
 
+            {/* Course Selector Tabs */}
+            <div className="flex flex-wrap gap-3 mb-8">
+               {programsData.map((program) => (
+                 <button
+                   key={program.id}
+                   onClick={() => handleProgramSwitch(program.id)}
+                   className={`px-5 py-2 rounded-full text-[14px] font-semibold transition-all ${
+                     activeProgramId === program.id
+                       ? "bg-[#511ae4] text-white shadow-md border border-[#511ae4]"
+                       : "bg-white text-slate-600 border border-slate-200 hover:border-slate-300 hover:bg-slate-50"
+                   }`}
+                 >
+                   {program.name}
+                 </button>
+               ))}
+            </div>
+
             <div className="flex items-center gap-8 text-sm text-slate-900">
               <div className="flex flex-col">
                 <span className="text-slate-500 text-xs mb-1 font-medium">days</span>
-                <span className="font-bold text-base">Mon; Thu</span>
+                <span className="font-bold text-base">{activeProgram.days}</span>
               </div>
               <div className="h-8 w-px bg-slate-300"></div>
               <div className="flex flex-col">
                 <span className="text-slate-500 text-xs mb-1 font-medium">time</span>
-                <span className="font-bold text-base">17:00-19:00</span>
+                <span className="font-bold text-base">{activeProgram.time}</span>
               </div>
             </div>
           </div>
 
-          {/* Top Right Graphic Placeholder */}
-          <div className="absolute top-0 right-0 w-[300px] h-[200px] hidden lg:block -translate-y-12 translate-x-12 z-0">
-             <div className="w-64 h-64 bg-gradient-to-br from-[#7742e6] to-[#4512d1] rounded-full absolute top-0 right-10"></div>
-             
-             {/* Fake UI window 1 */}
-             <div className="absolute top-[20%] right-16 w-48 h-32 bg-[#e9e3e3] rounded-xl shadow-xl transform rotate-[-8deg] overflow-hidden border border-white/40">
-                <div className="flex gap-1 p-2">
-                  <div className="w-2 h-2 rounded-full bg-slate-300"></div>
-                  <div className="w-2 h-2 rounded-full bg-slate-300"></div>
-                  <div className="w-2 h-2 rounded-full bg-slate-300"></div>
-                </div>
-                {/* Fake image block inside window */}
-                <div className="absolute bottom-[-10px] right-[-10px] w-28 h-28 bg-[#a1ded5] rounded-[30%] rotate-12 opacity-80 mix-blend-multiply"></div>
-             </div>
-
-             {/* Fake floating object */}
-             <div className="absolute top-[80%] left-[-10px] w-12 h-12 bg-[#ed7f9b] rounded-lg shadow-lg rotate-12 flex items-center justify-center -translate-y-10 border border-white/20">
-               <div className="w-0 h-0 border-l-[15px] border-l-transparent border-b-[20px] border-b-white/30 border-r-[15px] border-r-transparent"></div>
-             </div>
-             
-             <div className="absolute top-[-20px] left-[50px] w-8 h-8 bg-[#eabe88] shadow-md border border-white/20"></div>
-
-             {/* Dark Blue Window / Card */}
-             <div className="absolute top-[40%] right-[-10px] w-40 h-28 bg-[#2d1b6e] rounded-xl shadow-2xl transform rotate-[12deg] p-4 border border-white/10 flex flex-col justify-center gap-3">
-                <div className="w-8 h-8 rounded-full border-[3px] border-[#fce096] flex items-center justify-center">
-                  <div className="w-3 h-3 rounded-full bg-[#fce096]"></div>
-                </div>
-                <div className="w-8 h-1.5 bg-[#8ba1f3] rounded-full"></div>
-                <div className="w-16 h-1.5 bg-[#7742e6] rounded-full"></div>
-             </div>
-          </div>
+          {/* Top Right Graphic */}
+          <ProgramIllustration programId={activeProgramId} />
         </div>
 
         {/* Accordion List */}
         <div className="flex flex-col gap-4">
-          {modules.map((mod) => (
+          {activeProgram.modules.map((mod) => (
             <div 
               key={mod.id} 
               className={`rounded-3xl border transition-all duration-300 overflow-hidden cursor-pointer ${
@@ -190,7 +360,7 @@ const ProgramSection = () => {
         <div className="mt-12 flex flex-col md:flex-row items-center justify-between gap-6 pt-6">
           <div className="w-full md:w-auto flex flex-col">
             <span className="text-xs font-semibold text-slate-500 mb-1">seats left</span>
-            <span className="text-2xl font-bold text-slate-900">10 of 32</span>
+            <span className="text-2xl font-bold text-slate-900">{activeProgram.seats.left} of {activeProgram.seats.total}</span>
           </div>
 
           <button className="w-full md:flex-1 md:max-w-md bg-[#a4e678] hover:bg-[#8ee05b] text-[#1e1e1e] font-semibold text-[15px] px-8 py-5 rounded-2xl flex items-center justify-center gap-3 transition-transform hover:scale-[1.01] active:scale-[0.99]">

@@ -25,13 +25,13 @@ const IdealForYouSection = () => {
         {/* Left Side: Illustration and CTA */}
         <div className="flex flex-col h-full relative">
           
-          <h2 className="text-4xl md:text-[44px] lg:text-[50px] font-bold leading-[1.15] tracking-tight text-slate-900 mb-12">
+          <h2 className="text-3xl md:text-[44px] lg:text-[50px] font-bold leading-[1.15] tracking-tight text-slate-900 mb-8 lg:mb-12">
             The course is ideal <br />
             fo you <span className="text-[#511ae4] italic font-serif font-medium">if you are</span>
           </h2>
 
           {/* 3D Illustration Placeholder - Laptop & charts */}
-          <div className="relative w-full max-w-[400px] h-[350px] self-center my-8 ml-0 lg:ml-10">
+          <div className="relative w-full max-w-[400px] h-[350px] self-center my-4 lg:my-8 ml-0 lg:ml-10 scale-[0.85] md:scale-100 transform origin-center">
             {/* Background Purple Circle */}
             <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-br from-[#7742e6] to-[#4512d1] rounded-full z-0"></div>
             
@@ -81,13 +81,13 @@ const IdealForYouSection = () => {
             </div>
           </div>
 
-          <div className="mt-auto pt-8">
+          <div className="mt-auto pt-4 lg:pt-8 z-10 relative">
             <div className="flex items-center gap-2 mb-3">
               <div className="w-5 h-5 rounded-full bg-gradient-to-br from-[#badbad] to-[#80bd6e] shadow-[inset_0_2px_4px_rgba(255,255,255,0.8),0_2px_4px_rgba(130,190,110,0.4)] flex-shrink-0"></div>
               <p className="text-xs font-semibold text-slate-700">Wondering if the course is right for you?</p>
             </div>
             
-            <h3 className="text-3xl font-bold text-slate-900 leading-[1.1] mb-6 max-w-[280px]">
+            <h3 className="text-2xl lg:text-3xl font-bold text-slate-900 leading-[1.1] mb-6 max-w-[280px]">
               We offer a trial lesson for free
             </h3>
             
@@ -108,7 +108,7 @@ const IdealForYouSection = () => {
         <div className="flex flex-col gap-4 mt-12 lg:mt-[90px]">
           
           {/* Card 1 */}
-          <div className="bg-white border border-slate-400 rounded-3xl p-6 md:p-8 flex items-center gap-6 shadow-sm hover:shadow-md transition-shadow">
+          <div className="bg-white border border-slate-400 rounded-3xl p-6 md:p-8 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 shadow-sm hover:shadow-md transition-shadow">
             <div className="w-12 h-12 bg-[#511ae4] rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold text-lg shadow-inner">
               1
             </div>
@@ -123,7 +123,7 @@ const IdealForYouSection = () => {
           </div>
 
           {/* Card 2 */}
-          <div className="bg-white border border-slate-400 rounded-3xl p-6 md:p-8 flex items-center gap-6 shadow-sm hover:shadow-md transition-shadow">
+          <div className="bg-white border border-slate-400 rounded-3xl p-6 md:p-8 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 shadow-sm hover:shadow-md transition-shadow">
             <div className="w-12 h-12 bg-[#511ae4] rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold text-lg shadow-inner">
               2
             </div>
@@ -138,7 +138,7 @@ const IdealForYouSection = () => {
           </div>
 
           {/* Card 3 */}
-          <div className="bg-white border border-slate-400 rounded-3xl p-6 md:p-8 flex items-center gap-6 shadow-sm hover:shadow-md transition-shadow">
+          <div className="bg-white border border-slate-400 rounded-3xl p-6 md:p-8 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 shadow-sm hover:shadow-md transition-shadow">
             <div className="w-12 h-12 bg-[#511ae4] rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold text-lg shadow-inner">
               3
             </div>
