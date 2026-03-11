@@ -1,5 +1,5 @@
 import React from "react";
-import HoverDiagonalGrid from "./HoverDiagonalGrid";
+import HoverDiagonalGrid from "./ui/HoverDiagonalGrid";
 
 const featuresData = [
   {
@@ -54,7 +54,6 @@ const IdealForYouSection = () => {
 
             {/* 3D Illustration - Matching Reference Image */}
             <div className="relative w-full max-w-100 h-87.5 self-center my-4 lg:my-8 ml-0 lg:ml-10 scale-[0.85] md:scale-100 transform origin-center group cursor-pointer pt-12">
-              
               {/* Deep Purple Backdrop Sphere */}
               <div className="absolute top-[5%] left-[-5%] w-[80%] h-[100%] bg-gradient-to-tr from-[#381d85] to-[#5123d1] rounded-full z-0 transition-transform duration-700 group-hover:scale-[1.03] shadow-2xl skew-y-6"></div>
 
@@ -74,28 +73,43 @@ const IdealForYouSection = () => {
                 {/* Keyboard Layout */}
                 <div className="w-[95%] h-[80%] bg-[#f5f6f6] rounded-[8px] shadow-sm flex flex-col justify-around py-1.5 px-3 border-t border-[#ffffff]">
                   <div className="w-[95%] mx-auto h-2 bg-[#d1d5db]/40 rounded-sm"></div>
-                  
+
                   <div className="flex gap-[3px] justify-center w-[98%] mx-auto">
-                    {Array(11).fill(0).map((_, i) => (
-                      <div key={`r1-${i}`} className="flex-1 h-3.5 bg-[#eaeaeb] rounded-sm shadow-[0_1px_2px_rgba(0,0,0,0.05),inset_0_-1px_1px_rgba(0,0,0,0.05)] border border-white/60"></div>
-                    ))}
+                    {Array(11)
+                      .fill(0)
+                      .map((_, i) => (
+                        <div
+                          key={`r1-${i}`}
+                          className="flex-1 h-3.5 bg-[#eaeaeb] rounded-sm shadow-[0_1px_2px_rgba(0,0,0,0.05),inset_0_-1px_1px_rgba(0,0,0,0.05)] border border-white/60"
+                        ></div>
+                      ))}
                   </div>
-                  
+
                   <div className="flex gap-[3px] justify-center w-[95%] mx-auto">
-                    {Array(12).fill(0).map((_, i) => (
-                      <div key={`r2-${i}`} className="flex-1 h-3.5 bg-[#eaeaeb] rounded-sm shadow-[0_1px_2px_rgba(0,0,0,0.05),inset_0_-1px_1px_rgba(0,0,0,0.05)] border border-white/60"></div>
-                    ))}
+                    {Array(12)
+                      .fill(0)
+                      .map((_, i) => (
+                        <div
+                          key={`r2-${i}`}
+                          className="flex-1 h-3.5 bg-[#eaeaeb] rounded-sm shadow-[0_1px_2px_rgba(0,0,0,0.05),inset_0_-1px_1px_rgba(0,0,0,0.05)] border border-white/60"
+                        ></div>
+                      ))}
                   </div>
-                  
+
                   <div className="flex gap-[3px] justify-center w-[90%] mx-auto">
-                    {Array(9).fill(0).map((_, i) => (
-                      <div key={`r3-${i}`} className="flex-1 h-3.5 bg-[#eaeaeb] rounded-sm shadow-[0_1px_2px_rgba(0,0,0,0.05),inset_0_-1px_1px_rgba(0,0,0,0.05)] border border-white/60"></div>
-                    ))}
+                    {Array(9)
+                      .fill(0)
+                      .map((_, i) => (
+                        <div
+                          key={`r3-${i}`}
+                          className="flex-1 h-3.5 bg-[#eaeaeb] rounded-sm shadow-[0_1px_2px_rgba(0,0,0,0.05),inset_0_-1px_1px_rgba(0,0,0,0.05)] border border-white/60"
+                        ></div>
+                      ))}
                     {/* Orange Keys Accent */}
                     <div className="flex-1 h-3.5 bg-[#f6b359] rounded-sm shadow-[0_1px_2px_rgba(246,179,89,0.3),inset_0_-1px_1px_rgba(0,0,0,0.1)] max-w-[20px]"></div>
                     <div className="flex-[2] h-3.5 bg-[#f1f2f2] rounded-sm max-w-[25px]"></div>
                   </div>
-                  
+
                   {/* Spacebar */}
                   <div className="w-[45%] h-5 bg-[#eaeaeb] rounded-sm mx-auto shadow-[0_1px_2px_rgba(0,0,0,0.05),inset_0_-1px_1px_rgba(0,0,0,0.05)] border border-white/60 mt-1 pointer-events-none"></div>
                 </div>
@@ -105,27 +119,66 @@ const IdealForYouSection = () => {
               <div className="absolute top-[4%] right-[-12%] w-48 h-36 bg-[#7c8bfc] rounded-[30px] z-40 shadow-[-15px_25px_45px_rgba(0,0,0,0.2)] flex items-center justify-center transition-all duration-700 group-hover:rotate-[3deg] group-hover:-translate-y-3">
                 {/* Embedded decorative waves */}
                 <div className="absolute inset-0 overflow-hidden rounded-[30px] opacity-[0.15] pointer-events-none mask-image-circle">
-                  <svg viewBox="0 0 100 100" preserveAspectRatio="none" className="w-full h-full transform scale-150 -rotate-15">
-                     <path d="M0,50 Q25,25 50,50 T100,50 V100 H0 Z" fill="#ffffff" />
+                  <svg
+                    viewBox="0 0 100 100"
+                    preserveAspectRatio="none"
+                    className="w-full h-full transform scale-150 -rotate-15"
+                  >
+                    <path
+                      d="M0,50 Q25,25 50,50 T100,50 V100 H0 Z"
+                      fill="#ffffff"
+                    />
                   </svg>
                 </div>
-                
+
                 {/* Chat Bubble Tail */}
                 <div className="absolute -bottom-[14px] left-[30%] w-0 h-0 border-l-[15px] border-l-transparent border-t-[20px] border-t-[#7c8bfc] border-r-[15px] border-r-transparent transform -rotate-12"></div>
 
                 {/* Donut Chart Icon */}
-                <svg viewBox="0 0 100 100" className="w-[110px] h-[110px] transform rotate-[15deg] drop-shadow-[0_10px_15px_rgba(0,0,0,0.15)] z-10 transition-transform duration-700 group-hover:scale-105 group-hover:rotate-[20deg]">
+                <svg
+                  viewBox="0 0 100 100"
+                  className="w-[110px] h-[110px] transform rotate-[15deg] drop-shadow-[0_10px_15px_rgba(0,0,0,0.15)] z-10 transition-transform duration-700 group-hover:scale-105 group-hover:rotate-[20deg]"
+                >
                   {/* Base hole background (Optional visual depth) */}
                   <circle cx="50" cy="50" r="16" fill="#6773df" />
-                  
+
                   {/* Pink Slice (~45%) */}
-                  <circle cx="50" cy="50" r="28" fill="transparent" stroke="#d794b6" strokeWidth="26" strokeDasharray="130 176" transform="rotate(-90 50 50)" />
-                  
+                  <circle
+                    cx="50"
+                    cy="50"
+                    r="28"
+                    fill="transparent"
+                    stroke="#d794b6"
+                    strokeWidth="26"
+                    strokeDasharray="130 176"
+                    transform="rotate(-90 50 50)"
+                  />
+
                   {/* Yellow Slice (~25%) */}
-                  <circle cx="50" cy="50" r="28" fill="transparent" stroke="#eabe88" strokeWidth="26" strokeDasharray="50 176" strokeDashoffset="-130" transform="rotate(-90 50 50)" />
-                  
+                  <circle
+                    cx="50"
+                    cy="50"
+                    r="28"
+                    fill="transparent"
+                    stroke="#eabe88"
+                    strokeWidth="26"
+                    strokeDasharray="50 176"
+                    strokeDashoffset="-130"
+                    transform="rotate(-90 50 50)"
+                  />
+
                   {/* Purple Slice (~30%) */}
-                  <circle cx="50" cy="50" r="28" fill="transparent" stroke="#a084eb" strokeWidth="26" strokeDasharray="80 176" strokeDashoffset="-180" transform="rotate(-90 50 50)" />
+                  <circle
+                    cx="50"
+                    cy="50"
+                    r="28"
+                    fill="transparent"
+                    stroke="#a084eb"
+                    strokeWidth="26"
+                    strokeDasharray="80 176"
+                    strokeDashoffset="-180"
+                    transform="rotate(-90 50 50)"
+                  />
                 </svg>
               </div>
             </div>
