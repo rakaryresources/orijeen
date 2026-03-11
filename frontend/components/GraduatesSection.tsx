@@ -4,7 +4,7 @@ const GraduatesSection = () => {
   const benefits = [
     {
       id: 1,
-      text: "Certificate of completion for the selected IIT-JEE / NEET preparation programme.",
+      text: "Certificate of completion for the selected JEE / NEET preparation programme.",
     },
     {
       id: 2,

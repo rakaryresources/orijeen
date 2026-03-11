@@ -139,7 +139,7 @@ const programsData = [
     id: "advanced-achievers",
     name: "Advanced Achievers",
     duration: "10-11 months",
-    time: "IIT JEE / NEET",
+    time: "JEE / NEET",
     seats: { left: 5, total: 30 },
 
     modules: [
@@ -627,10 +627,10 @@ const ProgramSection = () => {
                 </div>
 
                 {/* The "More / Less" Circle Button + Arrow Indicator block */}
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-4 relative z-10">
                   {/* Circle text button visible on md+ screens */}
                   <div
-                    className={`hidden md:flex w-[72px] h-[72px] rounded-full border items-center justify-center transition-colors ${
+                    className={`hidden md:flex w-[72px] h-[72px] rounded-full border items-center justify-center transition-colors bg-white ${
                       openModule === mod.id
                         ? "border-[#a4e678]"
                         : "border-slate-300 hover:border-[#a4e678] hover:bg-[#a4e678]/10"
