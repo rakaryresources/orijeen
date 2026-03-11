@@ -1,31 +1,83 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import Image from "next/image";
 
 const RegistrationFormSection = () => {
-  const [selectedTopic, setSelectedTopic] = useState<string>("Register to the course");
+  const [selectedTopic, setSelectedTopic] = useState<string>("Foundation Builder (Class 11–12)");
+  
+  // State for the countdown timer
+  const [timeLeft, setTimeLeft] = useState({
+    days: 10,
+    hours: 13,
+    minutes: 34,
+    seconds: 48,
+  });
+
+  // Setup the live countdown effect
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft((prev) => {
+        if (prev.seconds > 0) {
+          return { ...prev, seconds: prev.seconds - 1 };
+        } else if (prev.minutes > 0) {
+          return { ...prev, minutes: prev.minutes - 1, seconds: 59 };
+        } else if (prev.hours > 0) {
+          return { ...prev, hours: prev.hours - 1, minutes: 59, seconds: 59 };
+        } else if (prev.days > 0) {
+          return { ...prev, days: prev.days - 1, hours: 23, minutes: 59, seconds: 59 };
+        }
+        return prev; // Timer finished
+      });
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  // Format time values with leading zeros
+  const formatTime = (value: number) => value.toString().padStart(2, "0");
 
   const topics = [
-    "Register to the course",
-    "Get a free trial lesson",
-    "Get a consultation",
+    "Foundation Builder (Class 11–12)",
+    "Advanced Achievers (JEE / NEET)",
+    "Repeater Achievers (Dropper Batch)",
   ];
 
   return (
     <section className="relative w-full bg-[#fdfdfd] py-12">
       
       {/* Top Banner Stripe */}
-      <div className="w-full bg-[#511ae4] py-4 px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between z-10 relative mt-32">
-        <div className="text-white text-sm md:text-base font-medium flex-1 max-w-md">
-          Book and pay for the course in full by 20.06 and get a 20% discount
+      <div className="w-full bg-[#511ae4] py-2 px-4 lg:px-6 flex flex-col md:flex-row items-center justify-between z-10 relative mt-32 overflow-hidden">
+        
+        {/* Animated Diagonal Grid Background */}
+        <div 
+          className="absolute inset-0 z-0 pointer-events-none opacity-20"
+          style={{
+            backgroundImage: "linear-gradient(-45deg, rgba(255, 255, 255, 0.3) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.3) 75%, transparent 75%, transparent)",
+            backgroundSize: "30px 30px",
+            animation: "bannerDiagonalMove 1.5s linear infinite"
+          }} 
+        />
+        <style dangerouslySetInnerHTML={{__html: `
+          @keyframes bannerDiagonalMove {
+            0% { background-position: 0 0; }
+            100% { background-position: 30px 30px; }
+          }
+        `}} />
+
+        <div className="text-white text-sm md:text-base font-medium flex-1 max-w-md relative z-10">
+          Reserve your seat in the upcoming JEE / NEET batch.
         </div>
         
-        <div className="flex items-center gap-4 mt-4 md:mt-0">
+        <div className="flex items-center gap-4 mt-4 md:mt-0 relative z-10">
           <span className="text-white text-sm md:text-base font-medium hidden md:block">
-            The early booking discount expires in
+            Admissions closing in
           </span>
-          <div className="border border-white text-white px-4 py-2 rounded-lg font-medium text-sm w-36 text-center shadow-sm">
-            10 days 13:34:48
+          <div className="border-[1.5px] border-white/40 text-white px-4 py-2 rounded-xl font-medium text-sm w-[150px] text-center shadow-sm flex items-center justify-center gap-1.5 backdrop-blur-sm bg-white/5 relative z-10">
+            <span>{timeLeft.days} days</span>
+            <span className="tabular-nums">
+              {formatTime(timeLeft.hours)}:{formatTime(timeLeft.minutes)}:{formatTime(timeLeft.seconds)}
+            </span>
           </div>
         </div>
       </div>
@@ -41,34 +93,24 @@ const RegistrationFormSection = () => {
 
           <div className="flex items-center gap-12 mt-8 md:mt-0 text-slate-900 relative z-10 self-end md:self-center">
             <div className="flex flex-col">
-              <span className="text-slate-500 text-[13px] mb-1 font-medium">Start date</span>
-              <span className="font-bold text-xl tracking-tight">12.07</span>
+              <span className="text-slate-500 text-[13px] mb-1 font-medium">Next Batch Starts</span>
+              <span className="font-bold text-xl tracking-tight text-[#16508c]">July 12th</span>
             </div>
             <div className="flex flex-col">
-              <span className="text-slate-500 text-[13px] mb-1 font-medium">Seats left</span>
+              <span className="text-slate-500 text-[13px] mb-1 font-medium">Seats Available</span>
               <span className="font-bold text-xl tracking-tight">10/32</span>
             </div>
           </div>
 
-          {/* 3D Character overlapping the form Placeholder */}
-          <div className="absolute top-0 md:-top-16 left-1/2 -translate-x-1/2 w-[200px] h-[350px] z-30 pointer-events-none hidden md:block drop-shadow-2xl">
-            {/* Using basic shapes to roughly match character volume/position over the form border */}
-            <div className="absolute top-2 left-1/2 -translate-x-1/2 w-14 h-16 bg-[#a76a52] rounded-3xl"></div> {/* Head */}
-            <div className="absolute top-[70px] left-1/2 -translate-x-1/2 w-20 h-28 bg-[#7742e6] rounded-2xl shadow-inner"></div> {/* Body */}
-            
-            {/* Arms holding phone */}
-            <div className="absolute top-[80px] left-4 w-6 h-16 bg-[#a76a52] rounded-full transform rotate-[30deg]"></div>
-            <div className="absolute top-[80px] right-4 w-6 h-16 bg-[#a76a52] rounded-full transform -rotate-[30deg]"></div>
-            <div className="absolute top-[120px] left-1/2 -translate-x-1/2 w-8 h-12 bg-slate-800 rounded z-20"></div> {/* Phone */}
-            
-            {/* Legs intersecting the form line */}
-            <div className="absolute top-[180px] left-8 w-8 h-24 bg-[#e9e3ed] rounded-full transform rotate-12 shadow-md"></div>
-            <div className="absolute top-[180px] right-2 w-8 h-20 bg-[#e9e3ed] rounded-full transform -rotate-[20deg] shadow-md z-0"></div>
-            <div className="absolute top-[250px] right-0 w-8 h-12 bg-[#e9e3ed] rounded-full z-10"></div>
-            
-            {/* Red Shoes */}
-            <div className="absolute bottom-[20px] left-4 w-10 h-6 bg-[#d94848] rounded-t-lg border-b-4 border-white shadow"></div>
-            <div className="absolute bottom-[80px] right-1 w-10 h-6 bg-[#d94848] rounded-t-lg border-b-4 border-white shadow"></div>
+          {/* Real Human Sitting Image overlaps the form border */}
+          <div className="absolute top-0 md:-top-[120px] lg:-top-[160px] left-1/2 -translate-x-1/2 z-30 pointer-events-none hidden md:block drop-shadow-2xl w-[380px] h-[380px] lg:w-[500px] lg:h-[500px]">
+            <Image
+              src="/human-sitting.png"
+              alt="Student sitting"
+              fill
+              className="object-contain"
+              priority
+            />
           </div>
         </div>
 
@@ -77,33 +119,33 @@ const RegistrationFormSection = () => {
           
           {/* Left Column (Inputs) */}
           <div className="flex-1 flex flex-col gap-6">
-            <h3 className="text-[15px] font-bold text-slate-800 mb-2">Your information</h3>
+            <h3 className="text-[15px] font-bold text-slate-800 mb-2">Student information</h3>
             
             <input 
               type="text" 
-              placeholder="Name*" 
+              placeholder="Student Name*" 
               className="w-full h-14 px-5 rounded-2xl border border-slate-300 text-sm font-medium text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#a4e678] focus:ring-1 focus:ring-[#a4e678] transition-all bg-white"
             />
             <input 
               type="text" 
-              placeholder="Surname*" 
+              placeholder="Parent / Guardian Name*" 
               className="w-full h-14 px-5 rounded-2xl border border-slate-300 text-sm font-medium text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#a4e678] focus:ring-1 focus:ring-[#a4e678] transition-all bg-white"
             />
             <input 
               type="email" 
-              placeholder="Email*" 
+              placeholder="Email Address*" 
               className="w-full h-14 px-5 rounded-2xl border border-slate-300 text-sm font-medium text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#a4e678] focus:ring-1 focus:ring-[#a4e678] transition-all bg-white"
             />
             <input 
               type="tel" 
-              placeholder="Phone*" 
+              placeholder="Phone Number*" 
               className="w-full h-14 px-5 rounded-2xl border border-slate-300 text-sm font-medium text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#a4e678] focus:ring-1 focus:ring-[#a4e678] transition-all bg-white"
             />
           </div>
 
           {/* Right Column (Topic Selection & Submit) */}
           <div className="flex-1 flex flex-col gap-6">
-            <h3 className="text-[15px] font-bold text-slate-800 mb-2">Select a topic</h3>
+            <h3 className="text-[15px] font-bold text-slate-800 mb-2">Select the programme</h3>
             
             <div className="flex flex-wrap gap-3 mb-8">
               {topics.map((topic) => (
@@ -129,11 +171,11 @@ const RegistrationFormSection = () => {
                       <path d="m12 5 7 7-7 7"></path>
                    </svg>
                 </div>
-                Contact us
+                Reserve my seat
               </button>
               
               <p className="text-[11px] text-slate-500 font-medium leading-relaxed max-w-[90%]">
-                By registering and clicking the &quot;Submit&quot; button, you agree to the terms of service and privacy policy
+                By submitting this form, you agree to be contacted by our academic coordinator regarding admission, course details, and batch availability.
               </p>
             </div>
           </div>

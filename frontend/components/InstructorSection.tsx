@@ -350,18 +350,9 @@ const InstructorSection = () => {
 
               </div>
               </div>
-
-              {/* Decorative bottom floating icon */}
-              <div className="mx-auto mt-12 w-20 h-20 bg-gradient-to-br from-[#7742e6] to-[#4512d1] rounded-full flex relative items-center justify-center shadow-lg -ml-10">
-                <div className="absolute top-2 left-6 w-8 h-8 rounded bg-[#a1bcf4] -rotate-12 border border-white/50"></div>
-                <div className="absolute bottom-4 left-4 w-10 h-4 rounded-full bg-[#f4a17d] rotate-12"></div>
-                <div className="absolute top-4 right-2 w-6 h-6 rounded-full bg-yellow-400 -rotate-12"></div>
-              </div>
-
             </div>
           </div>
         </div>
-
       </div>
     </section>
   );
