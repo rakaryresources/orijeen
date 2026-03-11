@@ -3,65 +3,64 @@ import React from "react";
 const RatesAndLoyaltySection = () => {
   const plans = [
     {
-      id: "independent",
-      title: "“Independent”",
-      subtitle: "27 video lectures",
+      id: "foundation-builder",
+      title: "Foundation Builder",
+      subtitle: "Class 11–12 science foundation programme",
       features: [
-        { text: "Viewing the recording of 27 video lectures of the previous group", included: true },
-        { text: "Checking homework assignments", included: true },
-        { text: "Feedback from the trainer", included: true },
-        { text: "Certificate", included: true },
-        { text: "Access to all course videos for 3 months", included: true },
-        { text: "One individual session with a trainer lasting 1 hour", included: false },
-        { text: "You can buy the required number of individual sessions. The cost of 1 session is 3500 INR", included: false },
+        { text: "Conceptual lectures covering Physics, Chemistry, Mathematics and Biology", included: true },
+        { text: "Structured assignments and daily practice problems (DPP)", included: true },
+        { text: "Regular doubt-clearing sessions with faculty", included: true },
+        { text: "Weekly topic-wise tests and progress tracking", included: true },
+        { text: "Access to recorded lessons and study material", included: true },
+        { text: "Monthly mock tests with performance analysis", included: true },
       ],
-      price: "18,500 INR",
-      note: "*The price does not include any individual sessions with a coach.",
+      price: "₹45,000",
+      note: "*Complete foundation programme designed for Class 11–12 students preparing for IIT-JEE or NEET.",
       highlighted: false,
     },
     {
-      id: "hybrid",
-      title: "“Hybrid”",
-      subtitle: "27 video lectures+1 online session with a coach",
+      id: "advanced-achievers",
+      title: "Advanced Achievers",
+      subtitle: "IIT-JEE / NEET advanced preparation batch",
       features: [
-        { text: "Viewing the recording of 27 video lectures of the previous group", included: true },
-        { text: "Checking homework assignments", included: true },
-        { text: "Feedback from the trainer", included: true },
-        { text: "Certificate", included: true },
-        { text: "Access to all course videos for 3 months", included: true },
-        { text: "One individual session with a trainer lasting 1 hour", included: true },
-        { text: "You can buy the required number of individual sessions. The cost of 1 session is 3500 INR", included: true },
+        { text: "Advanced problem-solving sessions for JEE and NEET", included: true },
+        { text: "Deep coverage of Physics, Chemistry, Mathematics and Biology", included: true },
+        { text: "Previous Year Question (PYQ) intensive practice", included: true },
+        { text: "All India Test Series (AITS) and competitive ranking", included: true },
+        { text: "Detailed performance analytics and improvement strategy", included: true },
+        { text: "Mentorship sessions for exam strategy and preparation", included: true },
       ],
-      price: "22,500 INR",
-      note: "*The price includes 1 individual session at a cost of 3500 INR.",
+      price: "₹65,000",
+      note: "*Designed for serious aspirants targeting top ranks in IIT-JEE or NEET.",
       highlighted: true,
     },
     {
-      id: "individual",
-      title: "“Individual”",
-      subtitle: "1 online session with a coach",
+      id: "repeater-achievers",
+      title: "Repeater Achievers",
+      subtitle: "Dropper batch for IIT-JEE / NEET",
       features: [
-        { text: "Training individually with a trainer", included: true },
-        { text: "The ability to create a customised programme", included: true },
-        { text: "Possibility to buy and complete only a single topic or topics", included: true },
-        { text: "Certificate", included: true },
-        { text: "You can buy the required number of individual sessions. The cost of 1 session is 3500 INR", included: true },
+        { text: "Complete syllabus rapid revision for Class 11 and 12", included: true },
+        { text: "High-weightage topic focused learning", included: true },
+        { text: "Daily practice problem (DPP) system", included: true },
+        { text: "Weekly full-length mock exams", included: true },
+        { text: "Personalised weakness analysis and improvement plan", included: true },
+        { text: "Final revision and exam strategy sessions", included: true },
       ],
-      price: "1,20,000 INR",
-      note: "*The price includes 27 individual sessions at a cost of 3500 INR per session.",
+      price: "₹55,000",
+      note: "*Intensive programme designed for repeaters aiming to improve their rank in the next attempt.",
       highlighted: false,
     },
   ];
 
   return (
-    <section className="relative w-full bg-[#fdfdfd] py-24 overflow-hidden font-sans border-t border-slate-100">
+    <section className="relative w-full bg-[#fdfdfd] py-24 overflow-hidden border-t border-slate-100">
       <div className="max-w-6xl mx-auto px-6 lg:px-8 relative z-20">
         
         {/* Header Section for Rates */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 relative">
           <h2 className="text-4xl md:text-[44px] lg:text-[50px] font-bold leading-[1.15] tracking-tight text-slate-900 max-w-2xl relative z-10">
-            <span className="text-[#511ae4] italic font-serif font-medium">Choose</span> the most convenient <br />
-            <span className="text-[#511ae4] italic font-serif font-medium">learning format</span>
+            <span className="text-[#511ae4] italic font-medium">Choose</span> the most convenient <br />
+            <span className="text-[#511ae4] italic font-medium">learning format</span>
           </h2>
 
           {/* Top Right Graphics Area */}
@@ -103,7 +102,7 @@ const RatesAndLoyaltySection = () => {
                   : "border border-slate-300 shadow-sm"
               }`}
             >
-              <h3 className="text-3xl font-bold text-slate-900 mb-2 tracking-tight">
+              <h3 className="text-[28px] font-bold text-slate-900 mb-2 tracking-tight">
                 {plan.title}
               </h3>
               <p className="text-[13px] text-slate-500 font-medium pb-6 border-b border-slate-200 mb-6 min-h-[40px]">
@@ -145,13 +144,13 @@ const RatesAndLoyaltySection = () => {
         {/* Loyalty Programme Header */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-12 mt-10">
           <h2 className="text-3xl md:text-[34px] font-bold leading-tight tracking-tight text-slate-900 max-w-xl">
-            Our school has a loyalty programme for online format on condition of payment in one transaction
+            Scholarships and Early Registration Benefits
           </h2>
 
           <div className="flex items-start gap-3 md:max-w-xs">
             <div className="w-6 h-6 rounded-full bg-gradient-to-br from-[#badbad] to-[#80bd6e] shadow-[inset_0_2px_4px_rgba(255,255,255,0.8),0_4px_8px_rgba(130,190,110,0.4)] flex-shrink-0 mt-0.5"></div>
             <p className="text-[13px] font-semibold text-slate-700 leading-snug">
-              To clarify the details and the amount of the discount, you can contact our coordinator
+              Students who register early or enroll with friends can receive special discounts. Contact our coordinator to learn about available scholarship opportunities.
             </p>
           </div>
         </div>
@@ -165,19 +164,11 @@ const RatesAndLoyaltySection = () => {
             <ul className="space-y-2">
               <li className="flex items-start gap-2 text-[13px] font-semibold text-slate-700">
                 <span className="text-slate-900 mt-[5px] text-[8px]">⚫</span>
-                Graduate of our other courses
+                Early Bird Registration
               </li>
               <li className="flex items-start gap-2 text-[13px] font-semibold text-slate-700">
                 <span className="text-slate-900 mt-[5px] text-[8px]">⚫</span>
-                Currently enrolled in our other courses
-              </li>
-              <li className="flex items-start gap-2 text-[13px] font-semibold text-slate-700">
-                <span className="text-slate-900 mt-[5px] text-[8px]">⚫</span>
-                University student
-              </li>
-              <li className="flex items-start gap-2 text-[13px] font-semibold text-slate-700">
-                <span className="text-slate-900 mt-[5px] text-[8px]">⚫</span>
-                Subject to booking and 100% payment by 20 June
+                Students who secure their seat before the deadline receive a special early registration discount.
               </li>
             </ul>
           </div>
@@ -188,7 +179,11 @@ const RatesAndLoyaltySection = () => {
             <ul className="space-y-2 relative z-10">
               <li className="flex items-start gap-2 text-[13px] font-semibold text-slate-700">
                 <span className="text-slate-900 mt-[5px] text-[8px]">⚫</span>
-                Came to us with a friend (if studying within the same group)
+                Group Enrollment
+              </li>
+              <li className="flex items-start gap-2 text-[13px] font-semibold text-slate-700">
+                <span className="text-slate-900 mt-[5px] text-[8px]">⚫</span>
+                Students enrolling together with a friend in the same batch can receive a group enrollment benefit.
               </li>
             </ul>
           </div>
@@ -199,7 +194,11 @@ const RatesAndLoyaltySection = () => {
             <ul className="space-y-2 relative z-10">
               <li className="flex items-start gap-2 text-[13px] font-semibold text-slate-700">
                 <span className="text-slate-900 mt-[5px] text-[8px]">⚫</span>
-                Feedback about us at DOU
+                Merit Scholarship
+              </li>
+              <li className="flex items-start gap-2 text-[13px] font-semibold text-slate-700">
+                <span className="text-slate-900 mt-[5px] text-[8px]">⚫</span>
+                Limited scholarships are available for students with strong academic performance.
               </li>
             </ul>
           </div>
@@ -214,7 +213,7 @@ const RatesAndLoyaltySection = () => {
                 <path d="m12 5 7 7-7 7"></path>
              </svg>
           </div>
-          Contact us
+          Contact our coordinator
         </button>
 
       </div>
