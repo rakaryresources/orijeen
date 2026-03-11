@@ -2,13 +2,14 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import SunDoodle from "./Doodle";
 
 const HeroSection = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
     <div className="bg-[#0a0a0a] px-2 py-4 md:px-6 md:py-8 lg:p-10 relative z-10 min-h-screen flex flex-col justify-center">
-      <div className="relative w-full max-w-[1440px] mx-auto min-h-[calc(100vh-2rem)] md:min-h-[calc(100vh-4rem)] lg:min-h-[calc(100vh-6rem)] bg-[#fafafc] text-slate-800 font-sans flex flex-col items-center pt-8 md:pt-10 rounded-xl shadow-2xl overflow-hidden">
+      <div className="relative w-full max-w-360 mx-auto min-h-[calc(100vh-2rem)] md:min-h-[calc(100vh-4rem)] lg:min-h-[calc(100vh-6rem)] bg-[#fafafc] text-slate-800 flex flex-col items-center pt-8 md:pt-10 rounded-xl shadow-2xl overflow-hidden">
         {/* Navbar Container - Pill Shape */}
         <nav className="relative z-50 w-[90%] max-w-5xl mx-auto bg-[#0a0a0a] text-white rounded-2xl px-8 py-4 flex items-center justify-between shadow-2xl">
           {/* Left Nav */}
@@ -75,7 +76,7 @@ const HeroSection = () => {
 
         {/* Screen Overlay Menu for Mobile */}
         {isMobileMenuOpen && (
-          <div className="fixed inset-0 z-[100] bg-[#0a0a0a] text-white flex flex-col pt-8 px-6 md:hidden overflow-hidden overflow-y-auto">
+          <div className="fixed inset-0 z-100 bg-[#0a0a0a] text-white flex flex-col pt-8 px-6 md:hidden overflow-hidden overflow-y-auto">
             {/* Header config inside modal */}
             <div className="flex justify-between items-center w-full max-w-[90%] mx-auto py-2">
               <div className="flex items-center gap-1">
@@ -184,31 +185,7 @@ const HeroSection = () => {
           {/* Decorative Doodles Background */}
           <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-b-[2.5rem] md:rounded-b-[4rem]">
             {/* Top Left Sun Doodle */}
-            <svg
-              className="absolute top-0 left-5 md:left-12 w-28 h-28 text-[#a4e678]"
-              viewBox="0 0 100 100"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="3"
-              strokeLinecap="round"
-            >
-              <line x1="50" y1="10" x2="50" y2="35" />
-              <line x1="50" y1="65" x2="50" y2="90" />
-              <line x1="10" y1="50" x2="35" y2="50" />
-              <line x1="65" y1="50" x2="90" y2="50" />
-              <line x1="22" y1="22" x2="40" y2="40" />
-              <line x1="60" y1="60" x2="78" y2="78" />
-              <line x1="22" y1="78" x2="40" y2="60" />
-              <line x1="60" y1="40" x2="78" y2="22" />
-              <line x1="30" y1="15" x2="43" y2="38" />
-              <line x1="57" y1="62" x2="70" y2="85" />
-              <line x1="15" y1="30" x2="38" y2="43" />
-              <line x1="62" y1="57" x2="85" y2="70" />
-              <line x1="15" y1="70" x2="38" y2="57" />
-              <line x1="62" y1="43" x2="85" y2="30" />
-              <line x1="30" y1="85" x2="43" y2="62" />
-              <line x1="57" y1="38" x2="70" y2="15" />
-            </svg>
+            <SunDoodle className="absolute top-0 left-5 md:left-12 w-28 h-28 text-[#a4e678]" />
 
             {/* Left Middle Hash Doodle */}
             <svg
@@ -262,9 +239,9 @@ const HeroSection = () => {
           </div>
 
           {/* Hero Graphic & Floating Elements Area */}
-          <div className="relative w-full max-w-5xl mt-12 md:mt-20 flex justify-center h-[450px] md:h-[550px] lg:h-[600px] flex-grow">
+          <div className="relative w-full max-w-5xl mt-12 md:mt-20 flex justify-center h-112.5 md:h-137.5 lg:h-150 grow">
             {/* Large Half-Circle/Circle Background behind character */}
-            <div className="absolute top-28 md:top-24 lg:top-32 w-[380px] h-[380px] md:w-[550px] md:h-[550px] bg-[#f0f0f4] shadow-inner rounded-full -z-10 overflow-hidden border border-slate-200" />
+            <div className="absolute top-28 md:top-24 lg:top-32 w-95 h-95 md:w-137.5 md:h-137.5 bg-[#f0f0f4] shadow-inner rounded-full -z-10 overflow-hidden border border-slate-200" />
 
             {/* Left Floating Card (Text Content) */}
             <div className="hidden lg:flex absolute left-0 top-1/4 max-w-xs flex-col gap-5 p-2 z-30">
@@ -274,7 +251,7 @@ const HeroSection = () => {
                 Empowering your journey.
               </p>
               <div className="px-5 py-2.5 border border-slate-400 rounded-full text-sm font-semibold text-slate-600 self-start hover:border-[#a4e678] transition-colors cursor-pointer">
-                Join the Best Institute
+                Join the Best Coaching
               </div>
 
               {/* Doodle Black Curly Arrow pointing to CTA */}
@@ -325,7 +302,7 @@ const HeroSection = () => {
 
             {/* Center Character Placeholder */}
             <div className="relative z-10 flex flex-col items-center h-full pt-4 md:pt-8 w-full">
-              <div className="w-[380px] h-[450px] md:w-[600px] md:h-[650px] relative -mt-6 md:-mt-10">
+              <div className="w-95 h-112.5 md:w-150 md:h-162.5 relative -mt-6 md:-mt-10">
                 <Image
                   src="/girl-hero-removebg.png"
                   alt="Hero Girl"
@@ -344,19 +321,19 @@ const HeroSection = () => {
       </div>
 
       {/* Straddling CTA Pill */}
-      <div className="absolute bottom-[-10px] md:bottom-[14vh] left-1/2 transform -translate-x-1/2 md:translate-y-1/2 z-50 bg-[#16161b]/60 backdrop-blur-2xl border border-white/10 shadow-[0_30px_60px_rgba(0,0,0,0.4),inset_0_0_20px_rgba(255,255,255,0.05)] rounded-[2rem] md:rounded-full p-2 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-0 w-[90%] sm:w-max max-w-[320px] sm:max-w-none mx-auto">
-        <button className="bg-[#a4e678] hover:bg-[#92d663] transition-colors text-slate-900 font-bold text-sm md:text-base px-6 py-3.5 md:py-4 rounded-full z-10 w-full sm:w-auto sm:min-w-[150px] md:w-[220px]">
-          Start Your Project
+      <div className="absolute -bottom-2.5 md:bottom-[14vh] left-1/2 transform -translate-x-1/2 md:translate-y-1/2 z-50 bg-[#16161b]/60 backdrop-blur-2xl border border-white/10 shadow-[0_30px_60px_rgba(0,0,0,0.4),inset_0_0_20px_rgba(255,255,255,0.05)] rounded-[2rem] md:rounded-full p-2 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-0 w-[90%] sm:w-max max-w-[320px] sm:max-w-none mx-auto">
+        <button className="bg-[#a4e678] hover:bg-[#92d663] transition-colors text-slate-900 font-bold text-sm md:text-base px-6 py-3.5 md:py-4 rounded-full z-10 w-full sm:w-auto sm:min-w-37.5 md:w-55">
+          Join now
         </button>
 
         {/* Glossy Separator with Glow */}
         <div className="relative hidden md:flex items-center justify-center w-8 h-8 z-10">
-          <div className="absolute w-[1px] h-8 bg-white/50 z-10" />
-          <div className="absolute w-[24px] h-[36px] bg-white opacity-40 blur-md rounded-full pointer-events-none" />
+          <div className="absolute w-px h-8 bg-white/50 z-10" />
+          <div className="absolute w-6 h-9 bg-white opacity-40 blur-md rounded-full pointer-events-none" />
         </div>
 
-        <button className="px-6 py-3.5 md:py-4 font-medium text-sm md:text-base text-white hover:text-slate-200 transition-colors rounded-full z-10 w-full sm:w-auto sm:min-w-[150px] md:w-[220px] whitespace-nowrap bg-white/5 sm:bg-transparent">
-          Let&apos;s Collaborate
+        <button className="px-6 py-3.5 md:py-4 font-medium text-sm md:text-base text-white hover:text-slate-200 transition-colors rounded-full z-10 w-full sm:w-auto sm:min-w-37.5 md:w-55 whitespace-nowrap bg-white/5 sm:bg-transparent">
+          Read more
         </button>
       </div>
     </div>
