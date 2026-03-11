@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import HoverDiagonalGrid from "./HoverDiagonalGrid";
+import HoverDiagonalGrid from "./ui/HoverDiagonalGrid";
 
 const programsData = [
   {
@@ -383,7 +383,9 @@ const ProgramIllustration = ({ programId }: { programId: string }) => {
 
         {/* Chart Window - Performance Tracking */}
         <div className="absolute top-[15%] right-16 w-52 h-36 bg-white/95 backdrop-blur-sm rounded-xl shadow-xl transform rotate-[5deg] overflow-hidden border border-white p-4 transition-all duration-500 group-hover:rotate-[-2deg] group-hover:-translate-y-2 group-hover:shadow-2xl">
-          <div className="text-[10px] font-bold text-slate-400 mb-2 tracking-wider">MOCK TEST ANALYSIS</div>
+          <div className="text-[10px] font-bold text-slate-400 mb-2 tracking-wider">
+            MOCK TEST ANALYSIS
+          </div>
           <div className="flex gap-2.5 items-end h-[60%] pt-2">
             <div className="w-full bg-slate-200 rounded-t-sm h-[30%] origin-bottom transition-all duration-500 group-hover:h-[40%]"></div>
             <div className="w-full bg-[#a1ded5] rounded-t-sm h-[70%] origin-bottom transition-all duration-500 group-hover:h-[85%]"></div>
@@ -433,9 +435,19 @@ const ProgramIllustration = ({ programId }: { programId: string }) => {
               <div className="w-full h-full bg-slate-100 rounded-lg transition-colors group-hover:bg-[#ff7e5f]/10"></div>
             </div>
             <div className="w-2/3 h-full bg-gradient-to-b from-[#a1ded5] to-[#7acbc0] rounded-lg opacity-90 p-2 relative overflow-hidden text-[#1a5b50]">
-               <svg viewBox="0 0 24 24" fill="none" className="w-4 h-4 text-white opacity-60 absolute bottom-2 right-2 group-hover:scale-125 transition-transform">
-                  <path d="M5 13l4 4L19 7" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-               </svg>
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                className="w-4 h-4 text-white opacity-60 absolute bottom-2 right-2 group-hover:scale-125 transition-transform"
+              >
+                <path
+                  d="M5 13l4 4L19 7"
+                  stroke="currentColor"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
             </div>
           </div>
         </div>

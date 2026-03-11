@@ -3,8 +3,8 @@
 import Image from "next/image";
 import CountUp from "react-countup";
 import { Users, Trophy } from "lucide-react";
-import SunDoodle from "./Doodle";
-import Doodle from "./Doodle";
+import SunDoodle from "./ui/Doodle";
+import Doodle from "./ui/Doodle";
 
 const AboutSection = () => {
   const courseStats = [

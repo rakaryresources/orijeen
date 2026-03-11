@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import SunDoodle from "./Doodle";
+import SunDoodle from "./ui/Doodle";
 
 const HeroSection = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
