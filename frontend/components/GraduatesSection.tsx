@@ -1,40 +1,40 @@
-import React from "react";
+import HoverDiagonalGrid from "./HoverDiagonalGrid";
 
 const GraduatesSection = () => {
-  const benefits = [
-    {
-      id: 1,
-      text: "Electronic certificate of completion of the course \"The art of Business Analysis. Go PRO\".",
-    },
-    {
-      id: 2,
-      text: "Access to recordings of all lectures for 6 months.",
-    },
-    {
-      id: 3,
-      text: "Opportunity to complete an internship to gain the necessary experience and material for your portfolio.",
-    },
-    {
-      id: 4,
-      text: "After the internship, you may be included in the database of job seekers that we share with our partners.",
-    },
-    {
-      id: 5,
-      text: "Checklists and useful links to help you with your future projects",
-    },
-    {
-      id: 6,
-      text: "The opportunity to use our loyalty programme in the future.",
-    },
-    {
-      id: 7,
-      text: "A database of materials on each topic covered in the course.",
-    },
-    {
-      id: 8,
-      text: "Help with interview preparation: creating a CV and preparing for interviews.",
-    },
-  ];
+ const benefits = [
+  {
+    id: 1,
+    text: "Certificate of completion for the selected IIT-JEE / NEET preparation programme.",
+  },
+  {
+    id: 2,
+    text: "Access to recorded lectures, notes, and study materials for revision throughout the course.",
+  },
+  {
+    id: 3,
+    text: "Structured assignments, Daily Practice Problems (DPP), and topic-wise practice sheets.",
+  },
+  {
+    id: 4,
+    text: "Regular doubt-clearing sessions and academic support from experienced faculty.",
+  },
+  {
+    id: 5,
+    text: "Weekly topic tests and full-length mock exams with detailed performance analysis.",
+  },
+  {
+    id: 6,
+    text: "Previous year question practice and advanced problem-solving sessions.",
+  },
+  {
+    id: 7,
+    text: "Personalised feedback on performance and guidance to improve weak topics.",
+  },
+  {
+    id: 8,
+    text: "Final revision sessions and exam strategy guidance before the main examination.",
+  },
+ ];
 
   return (
     <section className="relative w-full bg-[#fdfdfd] py-24 overflow-hidden border-t border-slate-100">
@@ -95,12 +95,13 @@ const GraduatesSection = () => {
           {benefits.map((benefit) => (
             <div 
               key={benefit.id} 
-              className="bg-white rounded-[32px] border border-slate-300 p-6 shadow-sm hover:shadow-md transition-shadow hover:border-[#a4e678] min-h-[200px] flex flex-col"
+              className="group relative overflow-hidden bg-white rounded-[32px] border border-slate-300 p-6 shadow-sm hover:shadow-md transition-shadow hover:border-[#a4e678] min-h-[200px] flex flex-col"
             >
-              <div className="w-12 h-12 bg-[#511ae4] rounded-full flex items-center justify-center mb-6 text-white font-bold text-[17px] shadow-inner flex-shrink-0">
+              <HoverDiagonalGrid />
+              <div className="relative z-10 w-12 h-12 bg-[#511ae4] rounded-full flex items-center justify-center mb-6 text-white font-bold text-[17px] shadow-inner flex-shrink-0">
                 {benefit.id}
               </div>
-              <p className="text-[13px] text-slate-700 font-medium leading-relaxed mt-auto pb-2">
+              <p className="relative z-10 text-[13px] text-slate-700 font-medium leading-relaxed mt-auto pb-2">
                 {benefit.text}
               </p>
             </div>
