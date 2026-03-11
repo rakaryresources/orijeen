@@ -12,7 +12,7 @@ const RegistrationFormSection = () => {
   ];
 
   return (
-    <section className="relative w-full bg-[#fdfdfd] py-12 font-sans">
+    <section className="relative w-full bg-[#fdfdfd] py-12">
       
       {/* Top Banner Stripe */}
       <div className="w-full bg-[#511ae4] py-4 px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between z-10 relative mt-32">
@@ -36,7 +36,7 @@ const RegistrationFormSection = () => {
         <div className="flex flex-col md:flex-row justify-between items-start mb-8 relative">
           
           <h2 className="text-4xl md:text-[44px] lg:text-[50px] font-bold leading-[1.1] tracking-tight text-slate-900 max-w-lg z-10 relative">
-            <span className="text-[#511ae4] italic font-serif font-medium">Fill out the form</span> and we will contact you
+            <span className="text-[#511ae4] italic font-medium">Fill out the form</span> and we will contact you
           </h2>
 
           <div className="flex items-center gap-12 mt-8 md:mt-0 text-slate-900 relative z-10 self-end md:self-center">
