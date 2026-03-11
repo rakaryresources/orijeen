@@ -1,5 +1,5 @@
 import HeroSection from "../components/HeroSection";
-import CourseDetailsSection from "../components/CourseDetailsSection";
+import AboutSection from "../components/AboutSection";
 import IdealForYouSection from "../components/IdealForYouSection";
 import InstructorSection from "../components/InstructorSection";
 import ProgramSection from "../components/ProgramSection";
@@ -12,11 +12,11 @@ export default function Home() {
   return (
     <main className="flex flex-col overflow-x-clip bg-[#0a0a0a]">
       <HeroSection />
-      <CourseDetailsSection />
+      <AboutSection />
       <IdealForYouSection />
-      <InstructorSection />
       <ProgramSection />
       <GraduatesSection />
+      <InstructorSection />
       <RatesAndLoyaltySection />
       <RegistrationFormSection />
       <SocialsFooterSection />

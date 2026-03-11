@@ -37,7 +37,7 @@ const GraduatesSection = () => {
   ];
 
   return (
-    <section className="relative w-full bg-[#fdfdfd] py-24 overflow-hidden font-sans border-t border-slate-100">
+    <section className="relative w-full bg-[#fdfdfd] py-24 overflow-hidden border-t border-slate-100">
       <div className="max-w-6xl mx-auto px-6 lg:px-8 relative z-20">
         
         {/* Header Section */}
@@ -85,8 +85,8 @@ const GraduatesSection = () => {
           </div>
 
           <h2 className="text-4xl md:text-[44px] lg:text-[50px] font-bold leading-[1.15] tracking-tight text-slate-900 text-right max-w-xl relative z-10">
-            <span className="text-[#511ae4] italic font-serif font-medium">Graduates</span> of our online<br />
-            course <span className="text-[#511ae4] italic font-serif font-medium">will receive</span>
+            <span className="text-[#511ae4] italic font-medium">Graduates</span> of our online<br />
+            course <span className="text-[#511ae4] italic font-medium">will receive</span>
           </h2>
         </div>
 
