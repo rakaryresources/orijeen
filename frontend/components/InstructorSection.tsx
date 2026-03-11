@@ -19,7 +19,7 @@ const instructors = [
     tags: ["JEE Expert", "Senior Faculty", "Mentor"],
     about:
       "I play a pivotal role in shaping the learning experience for the students. Drawing upon my expertise in the field, I provide hands-on guidance to ensure students acquire practical skills and valuable insights.",
-    image: "/ins1.jpg",
+    image: "/ins1.png",
     socials: { facebook: "#", twitter: "#", instagram: "#" },
     accentBg: "bg-[#a4e678]",
     tagBorder: "border-[#a4e678]",
@@ -208,17 +208,17 @@ const InstructorSection = () => {
         {/* Top Part: Author Section */}
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-12 mb-16 lg:mb-32 items-center">
           {/* Left: Author Image/Graphic */}
-          <div className="relative w-full max-w-[400px] mx-auto lg:mx-0">
-            {/* Base container for image */}
-            <div className="w-full aspect-[4/5] bg-slate-50 border border-slate-200 shadow-xl relative overflow-hidden group">
-              {/* Real Image */}
-              <div className="absolute inset-0">
+          <div className="relative w-full max-w-[460px] mx-auto lg:mx-0 flex justify-center lg:justify-start items-center">
+            {/* Base container for image with advanced borders and shadows */}
+            <div className="w-full aspect-square bg-[#0a0a0a] border border-gray-900 p-1.5 shadow-[0_30px_60px_-15px_rgba(81,26,228,0.2),0_0_0_1px_rgba(255,255,255,0.5)_inset] relative group rounded-[2.5rem] z-10">
+              {/* Inner wrapper for the actual image */}
+              <div className="absolute inset-1.5 rounded-[2.25rem] overflow-hidden bg-[#0a0a0a] ring-1 ring-white/10">
                 {currentInstructor.image ? (
                   <Image
                     src={currentInstructor.image}
                     alt={currentInstructor.name}
                     fill
-                    className="object-cover object-top"
+                    className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-110"
                   />
                 ) : (
                   <div className="w-full h-full bg-slate-200 flex items-center justify-center text-slate-400">
@@ -226,7 +226,6 @@ const InstructorSection = () => {
                   </div>
                 )}
               </div>
-
             </div>
           </div>
 
@@ -262,36 +261,36 @@ const InstructorSection = () => {
                 ))}
               </div>
 
-              <div className="space-y-2 mb-10">
-                <h4 className="text-sm font-bold text-slate-900">About me</h4>
-                <p className="text-sm font-medium text-slate-600 leading-relaxed max-w-lg min-h-[120px]">
+              <div className="mb-10">
+                <h4 className="text-sm font-bold text-slate-900 mb-2">About me</h4>
+                <p className="text-sm font-medium text-slate-600 leading-relaxed max-w-lg mb-6">
                   {currentInstructor.about}
                 </p>
                 {/* Social Links */}
-                <div className="flex items-center gap-4 pt-2">
+                <div className="flex items-center gap-5">
                   <a
                     href={currentInstructor.socials.facebook}
-                    className="w-10 h-10 rounded-full bg-slate-100 hover:bg-[#511ae4] flex items-center justify-center transition-all duration-300 group shadow-sm"
+                    className="w-12 h-12 rounded-full bg-slate-50 hover:bg-[#511ae4] flex items-center justify-center transition-all duration-300 group shadow-[0_4px_14px_rgba(0,0,0,0.04)] border border-slate-100"
                   >
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" className="text-slate-600 group-hover:text-white transition-colors">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" className="text-slate-600 group-hover:text-white transition-colors">
                       <path d="M14.542 12H12.607V19.167H9.727V12H8.381V9.529H9.727V7.817C9.727 6.131 10.495 5.048 12.646 5.048L14.735 5.05V7.411H13.228C12.261 7.411 12.183 7.788 12.183 8.361V9.529H14.739L14.542 12Z" />
                     </svg>
                   </a>
                   <a
                     href={currentInstructor.socials.twitter}
-                    className="w-10 h-10 rounded-full bg-slate-100 hover:bg-[#511ae4] flex items-center justify-center transition-all duration-300 group shadow-sm"
+                    className="w-12 h-12 rounded-full bg-slate-50 hover:bg-[#511ae4] flex items-center justify-center transition-all duration-300 group shadow-[0_4px_14px_rgba(0,0,0,0.04)] border border-slate-100"
                   >
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" className="text-slate-600 group-hover:text-white transition-colors">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" className="text-slate-600 group-hover:text-white transition-colors">
                       <path d="M22 5.8a8.49 8.49 0 0 1-2.36.65 4.14 4.14 0 0 0 1.8-2.27 8.24 8.24 0 0 1-2.6.99 4.13 4.13 0 0 0-7.03 3.77A11.72 11.72 0 0 1 3.29 4.67a4.13 4.13 0 0 0 1.28 5.51A4.08 4.08 0 0 1 2.7 9.6v.05a4.13 4.13 0 0 0 3.3 4.04 4.1 4.1 0 0 1-1.86.07 4.13 4.13 0 0 0 3.86 2.86 8.29 8.29 0 0 1-5.13 1.77A8.4 8.4 0 0 1 2 18.28a11.68 11.68 0 0 0 6.33 1.85c7.6 0 11.75-6.3 11.75-11.75 0-.18 0-.36-.01-.54A8.38 8.38 0 0 0 22 5.8z" />
                     </svg>
                   </a>
                   <a
                     href={currentInstructor.socials.instagram}
-                    className="w-10 h-10 rounded-full bg-slate-100 hover:bg-[#511ae4] flex items-center justify-center transition-all duration-300 group shadow-sm"
+                    className="w-12 h-12 rounded-full bg-slate-50 hover:bg-[#511ae4] flex items-center justify-center transition-all duration-300 group shadow-[0_4px_14px_rgba(0,0,0,0.04)] border border-slate-100"
                   >
                     <svg
-                      width="15"
-                      height="15"
+                      width="18"
+                      height="18"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
