@@ -1,12 +1,12 @@
-import HeroSection from "../components/HeroSection";
-import AboutSection from "../components/AboutSection";
-import IdealForYouSection from "../components/IdealForYouSection";
-import InstructorSection from "../components/InstructorSection";
-import ProgramSection from "../components/ProgramSection";
-import GraduatesSection from "../components/GraduatesSection";
-import RatesAndLoyaltySection from "../components/RatesAndLoyaltySection";
-import RegistrationFormSection from "../components/RegistrationFormSection";
-import SocialsFooterSection from "../components/SocialsFooterSection";
+import HeroSection from "@/components/HeroSection";
+import AboutSection from "@/components/AboutSection";
+import IdealForYouSection from "@/components/IdealForYouSection";
+import InstructorSection from "@/components/InstructorSection";
+import ProgramSection from "@/components/ProgramSection";
+import GraduatesSection from "@/components/GraduatesSection";
+import RatesAndLoyaltySection from "@/components/RatesAndLoyaltySection";
+import RegistrationFormSection from "@/components/RegistrationFormSection";
+import FooterSection from "@/components/FooterSection";
 
 export default function Home() {
   return (
@@ -19,7 +19,7 @@ export default function Home() {
       <InstructorSection />
       <RatesAndLoyaltySection />
       <RegistrationFormSection />
-      <SocialsFooterSection />
+      <FooterSection />
     </main>
   );
 }

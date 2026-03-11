@@ -158,17 +158,7 @@ const AboutSection = () => {
 
             {/* Inner curve illusions using shadow masking */}
             <div className="hidden lg:block absolute -top-8 -left-8 w-16 h-16 pointer-events-none rounded-br-3xl shadow-[30px_30px_0_30px_#0a0a0a] z-30"></div>
-
-            {/* Placeholder Content */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-slate-500 z-10">
-              <Trophy className="w-12 h-12 mb-4 opacity-40" />
-              <span className="font-medium tracking-widest uppercase text-xs opacity-50 px-4 text-center">
-                Replace with image
-                <br />
-                (e.g., Achievement)
-              </span>
-            </div>
-            {/* <Image src="/path-to-your-image2.jpg" alt="Achievements" fill className="object-cover" /> */}
+            <Image src="/hand.jpg" alt="Achievements" fill className="object-cover" />
           </div>
         </div>
       </div>
