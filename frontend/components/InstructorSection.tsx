@@ -170,7 +170,7 @@ const InstructorSection = () => {
   const currentInstructor = instructors[currentIndex];
 
   return (
-    <section className="relative w-full bg-[#fdfdfd] py-24 overflow-hidden font-sans border-t border-slate-100">
+    <section className="relative w-full bg-[#fdfdfd] py-24 overflow-hidden border-t border-slate-100">
 
       <div className="max-w-6xl mx-auto px-6 lg:px-8 relative z-20">
         
@@ -207,7 +207,7 @@ const InstructorSection = () => {
             {/* Overlay wrapper to handle opacity transition nicely */}
             <div className={`flex flex-col transition-opacity duration-300 ${isTransitioning ? 'opacity-0' : 'opacity-100'}`}>
               <h2 className="text-3xl md:text-4xl lg:text-[46px] font-bold leading-[1.15] tracking-tight text-slate-900 mb-6 lg:mb-8">
-                <span className="text-[#511ae4] italic font-serif font-medium">{currentInstructor.role}</span><br />
+                <span className="text-[#511ae4] italic font-medium">{currentInstructor.role}</span><br />
                 {currentInstructor.course}
               </h2>
 
@@ -276,8 +276,8 @@ const InstructorSection = () => {
             {/* Left Content */}
             <div className="lg:col-span-5 relative w-full">
               <h2 className="text-3xl md:text-[44px] lg:text-[50px] font-bold leading-[1.15] tracking-tight text-slate-900 mb-10 lg:mb-20 relative z-10">
-                <span className="text-[#511ae4] italic font-serif font-medium">Each student</span> of the<br />
-                course <span className="text-[#511ae4] italic font-serif font-medium">will receive</span>
+                <span className="text-[#511ae4] italic font-medium">Each student</span> of the<br />
+                course <span className="text-[#511ae4] italic font-medium">will receive</span>
               </h2>
 
               <div className="flex items-start gap-3 relative z-10">
