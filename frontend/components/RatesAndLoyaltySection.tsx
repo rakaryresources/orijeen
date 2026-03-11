@@ -1,4 +1,4 @@
-import React from "react";
+import HoverDiagonalGrid from "./ui/HoverDiagonalGrid";
 
 const RatesAndLoyaltySection = () => {
   const plans = [
@@ -15,13 +15,13 @@ const RatesAndLoyaltySection = () => {
         { text: "Monthly mock tests with performance analysis", included: true },
       ],
       price: "₹45,000",
-      note: "*Complete foundation programme designed for Class 11–12 students preparing for IIT-JEE or NEET.",
+      note: "*Complete foundation programme designed for Class 11–12 students preparing for JEE or NEET.",
       highlighted: false,
     },
     {
       id: "advanced-achievers",
       title: "Advanced Achievers",
-      subtitle: "IIT-JEE / NEET advanced preparation batch",
+      subtitle: "JEE / NEET advanced preparation batch",
       features: [
         { text: "Advanced problem-solving sessions for JEE and NEET", included: true },
         { text: "Deep coverage of Physics, Chemistry, Mathematics and Biology", included: true },
@@ -31,13 +31,13 @@ const RatesAndLoyaltySection = () => {
         { text: "Mentorship sessions for exam strategy and preparation", included: true },
       ],
       price: "₹65,000",
-      note: "*Designed for serious aspirants targeting top ranks in IIT-JEE or NEET.",
+      note: "*Designed for serious aspirants targeting top ranks in JEE or NEET.",
       highlighted: true,
     },
     {
       id: "repeater-achievers",
       title: "Repeater Achievers",
-      subtitle: "Dropper batch for IIT-JEE / NEET",
+      subtitle: "Dropper batch for JEE / NEET",
       features: [
         { text: "Complete syllabus rapid revision for Class 11 and 12", included: true },
         { text: "High-weightage topic focused learning", included: true },
@@ -64,30 +64,83 @@ const RatesAndLoyaltySection = () => {
           </h2>
 
           {/* Top Right Graphics Area */}
-          <div className="absolute top-[-50px] right-0 w-[300px] h-[250px] hidden lg:block z-0 pointer-events-none">
-            {/* 3D Character Placeholder */}
-            <div className="absolute bottom-[20%] left-[20%] w-16 h-32 z-20">
-               <div className="w-12 h-14 bg-[#8c6753] rounded-[20px] absolute top-0 left-1/2 -translate-x-1/2 z-10"></div>
-               <div className="w-16 h-20 bg-[#a1bcf4] rounded-[10px] absolute top-[40px] left-1/2 -translate-x-1/2 z-0"></div>
-               <div className="w-6 h-12 bg-[#8c6753] rounded-full absolute top-[60px] -right-2 transform rotate-12 z-20"></div>
-               <div className="w-6 h-12 bg-[#8c6753] rounded-full absolute top-[50px] -left-2 transform -rotate-12 z-0"></div>
+          <div className="absolute -top-[90px] -right-[10px] w-[420px] h-[320px] hidden lg:block z-0 group cursor-pointer transition-transform duration-700 hover:scale-[1.02] transform scale-[0.85] origin-right xl:scale-100">
+            {/* Floating Glow Backdrop Blob */}
+            <div className="absolute top-[30%] right-[30%] w-56 h-56 bg-gradient-to-br from-[#a4e678] to-[#609a47] rounded-full blur-3xl opacity-20 group-hover:opacity-40 transition-opacity duration-700"></div>
+
+            {/* Main Central Sphere / Disc */}
+            <div className="absolute top-[20%] right-[20%] w-60 h-60 flex items-center justify-center">
+              <div className="w-48 h-48 bg-gradient-to-br from-[#511ae4] to-[#2d0e8a] rounded-full absolute z-0 shadow-[inset_-10px_-10px_20px_rgba(0,0,0,0.2),0_15px_30px_rgba(81,26,228,0.3)] border-[4px] border-[#6b3deb] transition-transform duration-700 group-hover:scale-110 group-hover:-rotate-[10deg]"></div>
             </div>
 
-            {/* Top Right Floating Elements */}
-            <div className="absolute top-0 right-0 w-48 h-48 bg-gradient-to-br from-[#7742e6] to-[#4512d1] rounded-full z-0 flex items-center justify-center">
-              {/* Fake UI Card inside circle */}
-              <div className="w-32 h-24 bg-[#a1bcf4] rounded-xl transform rotate-12 shadow-lg relative border border-white/40 overflow-hidden">
-                <div className="absolute top-2 left-2 w-8 h-2 bg-white/70 rounded-full"></div>
-                <div className="absolute top-6 left-2 w-16 h-2 bg-white/50 rounded-full"></div>
-                
-                {/* File/Folder icon placeholder */}
-                <div className="absolute bottom-2 right-2 w-12 h-10 bg-[#fce096] rounded filter drop-shadow flex flex-col justify-end">
-                   <div className="w-full h-8 bg-[#8ba1f3] rounded-sm transform rotate-[-5deg] origin-bottom-left"></div>
-                </div>
-              </div>
-              {/* Floating coin/disc */}
-              <div className="absolute -top-4 right-8 w-10 h-10 bg-[#eabe88] rounded-full shadow-md z-10"></div>
+            {/* Back Dark Pricing Card */}
+            <div className="absolute top-[25%] right-[25%] w-36 h-48 bg-gradient-to-b from-[#1e1e2f] to-[#0f0f1a] rounded-2xl z-10 transform -rotate-[15deg] shadow-[0_25px_45px_rgba(0,0,0,0.4)] border border-slate-700 p-4 transition-all duration-700 group-hover:-rotate-[5deg] group-hover:-translate-x-4 group-hover:-translate-y-4">
+               {/* Card Top / Header */}
+               <div className="w-12 h-2 bg-[#d794b6] rounded-full mb-3 shadow-[0_0_10px_rgba(215,148,182,0.4)]"></div>
+               <div className="w-full h-1 bg-slate-700/50 rounded-full mb-4"></div>
+               {/* Fake Price Lines */}
+               <div className="flex flex-col gap-2.5">
+                  <div className="w-3/4 h-2.5 bg-slate-600 rounded-full"></div>
+                  <div className="w-2/3 h-2.5 bg-slate-600 rounded-full"></div>
+                  <div className="w-full h-2.5 bg-slate-600 rounded-full"></div>
+               </div>
+               {/* Button / Check */}
+               <div className="w-full h-6 bg-gradient-to-r from-[#d794b6] to-[#9d5b7a] mt-8 rounded-lg shadow-inner border-b-2 border-[#804862] hover:from-[#e4a8c6] transition-colors relative overflow-hidden">
+                 <div className="absolute top-0 left-0 w-full h-1/2 bg-white/10"></div>
+               </div>
             </div>
+
+            {/* Front Light Pricing Card / Interface */}
+            <div className="absolute top-[35%] right-[5%] w-44 h-36 bg-white/95 backdrop-blur-xl rounded-2xl z-20 transform rotate-[10deg] shadow-[0_20px_40px_rgba(0,0,0,0.15),-10px_-10px_20px_rgba(255,255,255,0.4)_inset] border border-white/80 p-4 flex flex-col transition-all duration-700 group-hover:rotate-[20deg] group-hover:translate-x-4 group-hover:-translate-y-2">
+               {/* Ticks and List */}
+               <div className="flex gap-2 items-center mb-3">
+                 <div className="w-6 h-6 rounded-full bg-gradient-to-bl from-[#a4e678] to-[#609a47] flex items-center justify-center shadow-[inset_1px_1px_3px_rgba(255,255,255,0.6)]">
+                   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12l5 5L20 7"></path></svg>
+                 </div>
+                 <div className="w-16 h-3 bg-[#a4e678] rounded-full opacity-60"></div>
+               </div>
+               <div className="flex flex-col gap-2.5 ml-1 mt-1">
+                 <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 rounded-full bg-slate-300"></div>
+                    <div className="w-20 h-1.5 bg-slate-200 rounded-full"></div>
+                 </div>
+                 <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 rounded-full bg-[#fce096]"></div>
+                    <div className="w-16 h-1.5 bg-[#fce096]/50 rounded-full"></div>
+                 </div>
+               </div>
+               {/* Accent Tag Drop */}
+               <div className="mt-auto self-end w-14 h-7 bg-gradient-to-br from-[#fce096] to-[#dca543] rounded-md shadow-inner flex items-center justify-center -skew-x-12 border border-[#fff2b2]">
+                 <div className="w-1/2 h-1 bg-white/80 rounded-full"></div>
+               </div>
+            </div>
+
+            {/* Golden 3D Coin #1 */}
+            <div className="absolute top-[10%] right-[5%] w-16 h-16 bg-gradient-to-br from-[#f8d46a] to-[#dca543] rounded-full z-30 transform -rotate-12 shadow-[0_15px_25px_rgba(220,165,67,0.4),inset_4px_4px_8px_rgba(255,255,255,0.8),inset_-4px_-4px_8px_rgba(200,140,40,0.8)] border-[2px] border-[#fff2b2] flex items-center justify-center transition-all duration-700 group-hover:-translate-y-6 group-hover:rotate-[15deg] group-hover:scale-110">
+               <div className="w-10 h-10 rounded-full border-[2px] border-[#fff2b2]/80 flex items-center justify-center text-[#a76315] opacity-90">
+                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+               </div>
+            </div>
+
+            {/* Golden 3D Coin #2 (Small, far left) */}
+            <div className="absolute top-[50%] right-[60%] w-10 h-10 bg-gradient-to-br from-[#f8d46a] to-[#dca543] rounded-full z-10 transform rotate-[25deg] shadow-[0_10px_15px_rgba(220,165,67,0.3),inset_2px_2px_5px_rgba(255,255,255,0.8)] border border-[#fff2b2] flex items-center justify-center transition-all duration-700 group-hover:-translate-x-5 group-hover:rotate-[50deg]">
+               <div className="w-5 h-5 border border-[#fff2b2]/80 rounded-full opacity-80"></div>
+            </div>
+
+            {/* Discount / Percentage Badge */}
+            <div className="absolute bottom-[20%] right-[35%] w-24 h-24 bg-gradient-to-tr from-[#f43f5e] to-[#e11d48] rounded-[24px] z-40 transform -rotate-[12deg] shadow-[0_20px_35px_rgba(244,63,94,0.4),inset_4px_4px_10px_rgba(255,255,255,0.6)] border border-[#fda4af] flex flex-col items-center justify-center transition-all duration-700 group-hover:-rotate-[5deg] group-hover:-translate-y-4 group-hover:scale-110">
+               <span className="text-white font-black text-[40px] leading-none tracking-tighter drop-shadow-md">%</span>
+               {/* Star sparkle micro-interaction */}
+               <div className="absolute -top-3 -right-3 w-8 h-8 text-yellow-200 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200 transform group-hover:rotate-45 group-hover:scale-125">
+                 <svg viewBox="0 0 24 24" fill="currentColor">
+                   <path d="M12 2L14.4 9.6L22 12L14.4 14.4L12 22L9.6 14.4L2 12L9.6 9.6L12 2Z"></path>
+                 </svg>
+               </div>
+            </div>
+
+            {/* Abstract Decorative Element */}
+            <div className="absolute top-[70%] right-[5%] w-6 h-6 bg-gradient-to-br from-[#a1bcf4] to-[#6c86e2] rounded-full z-30 shadow-[0_5px_10px_rgba(108,134,226,0.3)] transition-transform duration-700 group-hover:translate-x-3 group-hover:-translate-y-2 border border-[#dbe4fa]"></div>
+            
           </div>
         </div>
 
@@ -96,13 +149,16 @@ const RatesAndLoyaltySection = () => {
           {plans.map((plan) => (
             <div 
               key={plan.id} 
-              className={`bg-white rounded-[32px] p-8 flex flex-col h-full transition-shadow hover:shadow-lg relative overflow-hidden ${
+              className={`group bg-white rounded-[32px] p-8 flex flex-col h-full transition-shadow hover:shadow-lg relative overflow-hidden ${
                 plan.highlighted 
                   ? "border-2 border-[#a4e678] shadow-md" 
                   : "border border-slate-300 shadow-sm"
               }`}
             >
-              <h3 className="text-[28px] font-bold text-slate-900 mb-2 tracking-tight">
+              {plan.id === "advanced-achievers" && <HoverDiagonalGrid />}
+              
+              <div className="relative z-10 flex flex-col h-full">
+                <h3 className="text-[28px] font-bold text-slate-900 mb-2 tracking-tight">
                 {plan.title}
               </h3>
               <p className="text-[13px] text-slate-500 font-medium pb-6 border-b border-slate-200 mb-6 min-h-[40px]">
@@ -134,8 +190,10 @@ const RatesAndLoyaltySection = () => {
                         <path d="m12 5 7 7-7 7"></path>
                      </svg>
                   </div>
-                  Buy this tariff
+                  Buy this now
                 </button>
+              </div>
+              
               </div>
             </div>
           ))}
