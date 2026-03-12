@@ -7,6 +7,7 @@ import GraduatesSection from "@/components/GraduatesSection";
 import RatesAndLoyaltySection from "@/components/RatesAndLoyaltySection";
 import RegistrationFormSection from "@/components/RegistrationFormSection";
 import FooterSection from "@/components/FooterSection";
+import TestimonialSection from "@/components/TestimonialSection";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <ProgramSection />
       <GraduatesSection />
       <InstructorSection />
+      <TestimonialSection />
       <RatesAndLoyaltySection />
       <RegistrationFormSection />
       <FooterSection />
