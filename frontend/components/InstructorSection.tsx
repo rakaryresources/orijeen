@@ -157,12 +157,12 @@ const InstructorSection = () => {
 
       if (!bottomSection || !scrollCards || !scrollWrapper) return;
 
-      let mm = gsap.matchMedia();
+      const mm = gsap.matchMedia();
 
       mm.add("(min-width: 1024px)", () => {
         const getScrollAmount = () => {
-          let cardsWidth = scrollCards.scrollWidth;
-          let wrapperWidth = scrollWrapper.clientWidth;
+          const cardsWidth = scrollCards.scrollWidth;
+          const wrapperWidth = scrollWrapper.clientWidth;
           return -(cardsWidth - wrapperWidth + 100);
         };
 
@@ -208,7 +208,7 @@ const InstructorSection = () => {
         {/* Top Part: Author Section */}
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-12 mb-16 lg:mb-32 items-center">
           {/* Left: Author Image/Graphic */}
-          <div className="relative w-full max-w-[460px] mx-auto lg:mx-0 flex justify-center lg:justify-start items-center">
+          <div className="relative w-full max-w-115 mx-auto lg:mx-0 flex justify-center lg:justify-start items-center">
             {/* Base container for image with advanced borders and shadows */}
             <div className="w-full aspect-square bg-[#0a0a0a] border border-gray-900 p-1.5 shadow-[0_30px_60px_-15px_rgba(81,26,228,0.2),0_0_0_1px_rgba(255,255,255,0.5)_inset] relative group rounded-[2.5rem] z-10">
               {/* Inner wrapper for the actual image */}
@@ -262,7 +262,9 @@ const InstructorSection = () => {
               </div>
 
               <div className="mb-10">
-                <h4 className="text-sm font-bold text-slate-900 mb-2">About me</h4>
+                <h4 className="text-sm font-bold text-slate-900 mb-2">
+                  About me
+                </h4>
                 <p className="text-sm font-medium text-slate-600 leading-relaxed max-w-lg mb-6">
                   {currentInstructor.about}
                 </p>
@@ -272,7 +274,13 @@ const InstructorSection = () => {
                     href={currentInstructor.socials.facebook}
                     className="w-12 h-12 rounded-full bg-slate-50 hover:bg-[#511ae4] flex items-center justify-center transition-all duration-300 group shadow-[0_4px_14px_rgba(0,0,0,0.04)] border border-slate-100"
                   >
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" className="text-slate-600 group-hover:text-white transition-colors">
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      className="text-slate-600 group-hover:text-white transition-colors"
+                    >
                       <path d="M14.542 12H12.607V19.167H9.727V12H8.381V9.529H9.727V7.817C9.727 6.131 10.495 5.048 12.646 5.048L14.735 5.05V7.411H13.228C12.261 7.411 12.183 7.788 12.183 8.361V9.529H14.739L14.542 12Z" />
                     </svg>
                   </a>
@@ -280,7 +288,13 @@ const InstructorSection = () => {
                     href={currentInstructor.socials.twitter}
                     className="w-12 h-12 rounded-full bg-slate-50 hover:bg-[#511ae4] flex items-center justify-center transition-all duration-300 group shadow-[0_4px_14px_rgba(0,0,0,0.04)] border border-slate-100"
                   >
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" className="text-slate-600 group-hover:text-white transition-colors">
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      className="text-slate-600 group-hover:text-white transition-colors"
+                    >
                       <path d="M22 5.8a8.49 8.49 0 0 1-2.36.65 4.14 4.14 0 0 0 1.8-2.27 8.24 8.24 0 0 1-2.6.99 4.13 4.13 0 0 0-7.03 3.77A11.72 11.72 0 0 1 3.29 4.67a4.13 4.13 0 0 0 1.28 5.51A4.08 4.08 0 0 1 2.7 9.6v.05a4.13 4.13 0 0 0 3.3 4.04 4.1 4.1 0 0 1-1.86.07 4.13 4.13 0 0 0 3.86 2.86 8.29 8.29 0 0 1-5.13 1.77A8.4 8.4 0 0 1 2 18.28a11.68 11.68 0 0 0 6.33 1.85c7.6 0 11.75-6.3 11.75-11.75 0-.18 0-.36-.01-.54A8.38 8.38 0 0 0 22 5.8z" />
                     </svg>
                   </a>
@@ -299,7 +313,14 @@ const InstructorSection = () => {
                       strokeLinejoin="round"
                       className="text-slate-600 group-hover:text-white transition-colors"
                     >
-                      <rect x="2" y="2" width="20" height="20" rx="4" ry="4"></rect>
+                      <rect
+                        x="2"
+                        y="2"
+                        width="20"
+                        height="20"
+                        rx="4"
+                        ry="4"
+                      ></rect>
                       <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                       <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                     </svg>
@@ -327,8 +348,8 @@ const InstructorSection = () => {
             </div>
 
             {/* Absolute positioned floating icon for right side */}
-            <div className="hidden lg:block absolute top-[50px] right-0 w-32 h-32 transform translate-x-16">
-              <div className="w-full h-full bg-gradient-to-br from-[#7742e6] to-[#4512d1] rounded-full shadow-lg relative flex items-center justify-center p-4">
+            <div className="hidden lg:block absolute top-12.5 right-0 w-32 h-32 transform translate-x-16">
+              <div className="w-full h-full bg-linear-to-br from-[#7742e6] to-[#4512d1] rounded-full shadow-lg relative flex items-center justify-center p-4">
                 <div className="w-full h-full bg-[#8ba1f3] rounded-lg -rotate-12 shadow-md relative overflow-hidden flex items-center justify-center">
                   <div className="w-8 h-8 rounded-full bg-[#fce096] absolute right-2 bottom-2"></div>
                   <div className="w-4 h-4 rounded-full bg-white/50 absolute left-2 top-2"></div>
@@ -340,116 +361,6 @@ const InstructorSection = () => {
                     <div className="w-1.5 h-1.5 bg-[#4a2e26] rounded-full"></div>
                   </div>
                   <div className="w-4 h-1.5 bg-[#4a2e26] rounded-b-full"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Bottom Part: "Each student..." Section */}
-        <div
-          ref={bottomSectionRef}
-          className="mt-16 lg:mt-32 border-t border-slate-100 pt-12 lg:pt-16 min-h-0 lg:min-h-screen flex flex-col justify-center relative"
-        >
-          <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 items-start w-full max-w-6xl mx-auto">
-            {/* Left Content */}
-            <div className="lg:col-span-5 relative w-full">
-              <h2 className="text-3xl md:text-[44px] lg:text-[50px] font-bold leading-[1.15] tracking-tight text-slate-900 mb-10 lg:mb-20 relative z-10">
-                <span className="text-[#511ae4] italic font-medium">
-                  Each student
-                </span>{" "}
-                of the
-                <br />
-                course{" "}
-                <span className="text-[#511ae4] italic font-medium">
-                  will receive
-                </span>
-              </h2>
-
-              <div className="flex items-start gap-3 relative z-10">
-                <div className="w-5 h-5 rounded-full bg-gradient-to-br from-[#badbad] to-[#80bd6e] shadow-[inset_0_2px_4px_rgba(255,255,255,0.8),0_4px_8px_rgba(130,190,110,0.4)] flex-shrink-0 mt-1"></div>
-                <p className="text-xs font-semibold text-slate-600 max-w-[280px] leading-relaxed">
-                  Our courses are designed to be effective for everyone. Whether
-                  you study online or watch our recorded lectures.
-                </p>
-              </div>
-
-              {/* Character Illustration Next to Text */}
-              <div className="absolute bottom-[-10%] lg:bottom-[-20%] right-0 md:right-[10%] lg:right-[-20%] w-[100px] lg:w-[120px] h-[200px] lg:h-[250px] z-0 drop-shadow-2xl opacity-40 lg:opacity-100 pointer-events-none">
-                {/* Dummy placeholder for 3d character */}
-                <div className="w-16 h-20 bg-[#695d7f] rounded-[30px] absolute top-[20%] left-1/2 -translate-x-1/2 z-10"></div>
-                <div className="w-12 h-26 bg-[#7742e6] rounded-full absolute bottom-[10%] left-[20%] z-0 rotate-12"></div>
-                <div className="w-12 h-26 bg-[#7742e6] rounded-full absolute bottom-[10%] right-[20%] z-0 -rotate-12"></div>
-                <div className="w-12 h-12 bg-[#8c6753] rounded-full absolute top-[10%] left-1/2 -translate-x-1/2 z-20"></div>
-              </div>
-
-              {/* Small floating icon Top Left */}
-              <div className="absolute -top-8 lg:-top-16 right-4 lg:right-auto lg:left-24 w-12 h-12 bg-gradient-to-br from-[#7742e6] to-[#4512d1] rounded-full shadow-lg items-center justify-center p-2 z-0 hidden md:flex">
-                <div className="w-full h-full bg-[#a1bcf4] rounded -rotate-12 border border-white/50 flex flex-col gap-1 p-1">
-                  <div className="w-full h-1 bg-white/60"></div>
-                  <div className="w-full h-1 bg-white/60"></div>
-                </div>
-                <div className="absolute -top-1 -right-1 w-4 h-4 bg-[#c8b7f7] rounded-full border border-white flex items-center justify-center">
-                  <svg
-                    width="8"
-                    height="8"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="3"
-                    className="text-white"
-                  >
-                    <path d="M5 12l5 5L20 7"></path>
-                  </svg>
-                </div>
-              </div>
-            </div>
-
-            {/* Right Content - Horizontal Scroll Cards */}
-            <div className="lg:col-span-7 flex flex-col lg:pt-0 pt-12">
-              <div className="flex items-center gap-2 mb-4 pl-4 lg:pl-0 lg:hidden">
-                <span className="text-xs font-bold text-slate-800">Scroll</span>
-                <svg
-                  width="12"
-                  height="12"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2.5"
-                  className="text-slate-800"
-                >
-                  <path d="M5 12h14"></path>
-                  <path d="m12 5 7 7-7 7"></path>
-                </svg>
-              </div>
-
-              <div ref={scrollWrapperRef} className="lg:overflow-hidden w-full">
-                <div
-                  ref={scrollCardsRef}
-                  className="flex gap-4 lg:gap-6 pb-8 px-2 lg:px-0 scrollbar-hide w-full lg:w-max overflow-x-auto lg:overflow-visible snap-x snap-mandatory lg:snap-none"
-                >
-                  {/* Mapping over benefits array to create cards */}
-                  {benefits.map((benefit) => (
-                    <div
-                      key={benefit.id}
-                      className={`snap-center shrink-0 w-[280px] bg-white border ${benefit.border} rounded-[32px] p-8 shadow-sm hover:shadow-md transition-shadow`}
-                    >
-                      <div
-                        className={`w-12 h-12 ${benefit.color} rounded-full flex items-center justify-center mb-6 shadow-inner text-slate-800 font-bold text-lg`}
-                      >
-                        {benefit.id}
-                      </div>
-                      <h3 className="text-lg font-bold text-slate-900 leading-tight mb-4 pr-4 min-h-[56px]">
-                        {benefit.title}
-                      </h3>
-                      <p className="text-[13px] text-slate-600 font-medium leading-relaxed pb-4">
-                        {benefit.description}
-                      </p>
-                    </div>
-                  ))}
-
-                  {/* Empty decorative card at the end for visual spacing/effect */}
-                  <div className="snap-center shrink-0 w-[80px] bg-white border-y border-l border-slate-200 rounded-l-[32px] shadow-sm relative overflow-hidden"></div>
                 </div>
               </div>
             </div>

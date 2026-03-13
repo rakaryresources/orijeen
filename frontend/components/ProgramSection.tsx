@@ -333,8 +333,8 @@ const programsData = [
 const ProgramIllustration = ({ programId }: { programId: string }) => {
   if (programId === "foundation-builder") {
     return (
-      <div className="absolute top-0 right-0 w-[300px] h-[200px] hidden lg:block -translate-y-12 translate-x-12 z-0 animate-in fade-in zoom-in duration-500 group cursor-pointer">
-        <div className="w-64 h-64 bg-gradient-to-br from-[#7742e6] to-[#4512d1] rounded-full absolute top-0 right-10 shadow-2xl transition-transform duration-700 group-hover:scale-105"></div>
+      <div className="absolute top-0 right-0 w-75 h-50 hidden lg:block -translate-y-12 translate-x-12 z-0 animate-in fade-in zoom-in duration-500 group cursor-pointer">
+        <div className="w-64 h-64 bg-linear-to-br from-[#7742e6] to-[#4512d1] rounded-full absolute top-0 right-10 shadow-2xl transition-transform duration-700 group-hover:scale-105"></div>
 
         {/* Fake UI window 1 - Notebook/Formulas */}
         <div className="absolute top-[20%] right-16 w-48 h-32 bg-white/90 backdrop-blur-sm rounded-xl shadow-xl transform rotate-[-8deg] overflow-hidden border border-white p-3 transition-all duration-500 group-hover:rotate-0 group-hover:-translate-y-2 group-hover:shadow-2xl">
@@ -350,18 +350,18 @@ const ProgramIllustration = ({ programId }: { programId: string }) => {
             <div className="w-5/6 h-2 bg-slate-100 rounded-full"></div>
           </div>
           {/* Decorative atom-like or geometric shape */}
-          <div className="absolute bottom-[-10px] right-[-10px] w-20 h-20 border-4 border-[#a1ded5]/40 rounded-full rotate-12 transition-transform duration-700 group-hover:rotate-45"></div>
+          <div className="absolute -bottom-2.5 -right-2.5 w-20 h-20 border-4 border-[#a1ded5]/40 rounded-full rotate-12 transition-transform duration-700 group-hover:rotate-45"></div>
         </div>
 
         {/* Fake floating object - Equation symbol / Geometry */}
-        <div className="absolute top-[80%] left-[-10px] w-14 h-14 bg-gradient-to-tr from-[#ed7f9b] to-[#f4a5b9] rounded-2xl shadow-lg rotate-12 flex items-center justify-center -translate-y-10 border border-white/40 transition-all duration-500 group-hover:rotate-[24deg] group-hover:-translate-y-14 group-hover:scale-110">
-          <div className="w-0 h-0 border-l-[12px] border-l-transparent border-b-[20px] border-b-white border-r-[12px] border-r-transparent"></div>
+        <div className="absolute top-[80%] -left-2.5 w-14 h-14 bg-linear-to-tr from-[#ed7f9b] to-[#f4a5b9] rounded-2xl shadow-lg rotate-12 flex items-center justify-center -translate-y-10 border border-white/40 transition-all duration-500 group-hover:rotate-24 group-hover:-translate-y-14 group-hover:scale-110">
+          <div className="w-0 h-0 border-l-12 border-l-transparent border-b-20 border-b-white border-r-12 border-r-transparent"></div>
         </div>
 
-        <div className="absolute top-[-10px] left-[50px] w-10 h-10 bg-gradient-to-br from-[#eabe88] to-[#d69f5c] rounded-lg shadow-md border border-white/40 transition-transform duration-500 group-hover:-translate-y-3 group-hover:rotate-12"></div>
+        <div className="absolute -top-2.5 left-12.5 w-10 h-10 bg-linear-to-br from-[#eabe88] to-[#d69f5c] rounded-lg shadow-md border border-white/40 transition-transform duration-500 group-hover:-translate-y-3 group-hover:rotate-12"></div>
 
         {/* Dark Blue Window / Card - Physics/Math graphic */}
-        <div className="absolute top-[45%] right-[-10px] w-40 h-28 bg-[#2d1b6e]/95 backdrop-blur-md rounded-xl shadow-2xl transform rotate-[12deg] p-4 border border-white/20 flex flex-col justify-center gap-3 transition-all duration-500 group-hover:rotate-[6deg] group-hover:translate-x-2">
+        <div className="absolute top-[45%] -right-2.5 w-40 h-28 bg-[#2d1b6e]/95 backdrop-blur-md rounded-xl shadow-2xl transform rotate-12 p-4 border border-white/20 flex flex-col justify-center gap-3 transition-all duration-500 group-hover:rotate-6 group-hover:translate-x-2">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-full border-[3px] border-[#fce096]/80 flex items-center justify-center relative overflow-hidden group-hover:border-[#fce096] transition-colors">
               <div className="w-4 h-4 rounded-full bg-[#fce096] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 group-hover:scale-125 transition-transform duration-300"></div>
@@ -378,11 +378,11 @@ const ProgramIllustration = ({ programId }: { programId: string }) => {
 
   if (programId === "advanced-achievers") {
     return (
-      <div className="absolute top-0 right-0 w-[300px] h-[200px] hidden lg:block -translate-y-12 translate-x-12 z-0 animate-in fade-in zoom-in duration-500 group cursor-pointer">
-        <div className="w-64 h-64 bg-gradient-to-br from-[#12cf97] to-[#0b9c71] rounded-full absolute top-0 right-10 shadow-2xl transition-transform duration-700 group-hover:scale-105"></div>
+      <div className="absolute top-0 right-0 w-75 h-50 hidden lg:block -translate-y-12 translate-x-12 z-0 animate-in fade-in zoom-in duration-500 group cursor-pointer">
+        <div className="w-64 h-64 bg-linear-to-br from-[#12cf97] to-[#0b9c71] rounded-full absolute top-0 right-10 shadow-2xl transition-transform duration-700 group-hover:scale-105"></div>
 
         {/* Chart Window - Performance Tracking */}
-        <div className="absolute top-[15%] right-16 w-52 h-36 bg-white/95 backdrop-blur-sm rounded-xl shadow-xl transform rotate-[5deg] overflow-hidden border border-white p-4 transition-all duration-500 group-hover:rotate-[-2deg] group-hover:-translate-y-2 group-hover:shadow-2xl">
+        <div className="absolute top-[15%] right-16 w-52 h-36 bg-white/95 backdrop-blur-sm rounded-xl shadow-xl transform rotate-[5deg] overflow-hidden border border-white p-4 transition-all duration-500 group-hover:-rotate-2 group-hover:-translate-y-2 group-hover:shadow-2xl">
           <div className="text-[10px] font-bold text-slate-400 mb-2 tracking-wider">
             MOCK TEST ANALYSIS
           </div>
@@ -395,14 +395,14 @@ const ProgramIllustration = ({ programId }: { programId: string }) => {
         </div>
 
         {/* Fake floating object - Target/Focus */}
-        <div className="absolute top-[80%] left-[10px] w-14 h-14 bg-gradient-to-br from-[#2d1b6e] to-[#1a0f44] rounded-full shadow-lg rotate-12 flex items-center justify-center border border-white/20 transition-all duration-500 group-hover:scale-125 group-hover:-translate-y-4">
+        <div className="absolute top-[80%] left-2.5 w-14 h-14 bg-linear-to-br from-[#2d1b6e] to-[#1a0f44] rounded-full shadow-lg rotate-12 flex items-center justify-center border border-white/20 transition-all duration-500 group-hover:scale-125 group-hover:-translate-y-4">
           <div className="w-6 h-6 border-[3px] border-[#a4e678] rounded-full relative">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 bg-[#a4e678] rounded-full"></div>
           </div>
         </div>
 
         {/* Code / Status Card */}
-        <div className="absolute top-[50%] right-[-20px] w-40 h-24 bg-[#1e1e2f]/95 backdrop-blur-md rounded-xl shadow-2xl transform rotate-[-10deg] p-4 border border-white/10 flex flex-col justify-center gap-2.5 transition-all duration-500 group-hover:rotate-0 group-hover:translate-x-3">
+        <div className="absolute top-[50%] -right-5 w-40 h-24 bg-[#1e1e2f]/95 backdrop-blur-md rounded-xl shadow-2xl transform rotate-[-10deg] p-4 border border-white/10 flex flex-col justify-center gap-2.5 transition-all duration-500 group-hover:rotate-0 group-hover:translate-x-3">
           <div className="flex items-center gap-2 mb-1">
             <div className="w-2 h-2 rounded-full bg-red-500"></div>
             <div className="w-2 h-2 rounded-full bg-yellow-500"></div>
@@ -418,11 +418,11 @@ const ProgramIllustration = ({ programId }: { programId: string }) => {
 
   if (programId === "repeater-achievers") {
     return (
-      <div className="absolute top-0 right-0 w-[300px] h-[200px] hidden lg:block -translate-y-12 translate-x-12 z-0 animate-in fade-in zoom-in duration-500 group cursor-pointer">
-        <div className="w-64 h-64 bg-gradient-to-br from-[#ff7e5f] to-[#feb47b] rounded-full absolute top-0 right-10 shadow-2xl transition-transform duration-700 group-hover:scale-105"></div>
+      <div className="absolute top-0 right-0 w-75 h-50 hidden lg:block -translate-y-12 translate-x-12 z-0 animate-in fade-in zoom-in duration-500 group cursor-pointer">
+        <div className="w-64 h-64 bg-linear-to-br from-[#ff7e5f] to-[#feb47b] rounded-full absolute top-0 right-10 shadow-2xl transition-transform duration-700 group-hover:scale-105"></div>
 
         {/* Schedule / Time Management Window */}
-        <div className="absolute top-[15%] right-12 w-52 h-36 bg-white/95 backdrop-blur-sm rounded-xl shadow-xl transform rotate-[-5deg] overflow-hidden border border-white p-3 flex flex-col gap-2 transition-all duration-500 group-hover:rotate-[2deg] group-hover:-translate-y-2 group-hover:shadow-2xl">
+        <div className="absolute top-[15%] right-12 w-52 h-36 bg-white/95 backdrop-blur-sm rounded-xl shadow-xl transform rotate-[-5deg] overflow-hidden border border-white p-3 flex flex-col gap-2 transition-all duration-500 group-hover:rotate-2 group-hover:-translate-y-2 group-hover:shadow-2xl">
           <div className="flex justify-between items-center mb-1">
             <div className="w-16 h-2 bg-slate-200 rounded-full"></div>
             <div className="w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center">
@@ -434,7 +434,7 @@ const ProgramIllustration = ({ programId }: { programId: string }) => {
               <div className="w-full h-full bg-slate-100 rounded-lg transition-colors group-hover:bg-[#ff7e5f]/10"></div>
               <div className="w-full h-full bg-slate-100 rounded-lg transition-colors group-hover:bg-[#ff7e5f]/10"></div>
             </div>
-            <div className="w-2/3 h-full bg-gradient-to-b from-[#a1ded5] to-[#7acbc0] rounded-lg opacity-90 p-2 relative overflow-hidden text-[#1a5b50]">
+            <div className="w-2/3 h-full bg-linear-to-b from-[#a1ded5] to-[#7acbc0] rounded-lg opacity-90 p-2 relative overflow-hidden text-[#1a5b50]">
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
@@ -453,19 +453,19 @@ const ProgramIllustration = ({ programId }: { programId: string }) => {
         </div>
 
         {/* Fake floating object - Flashcard/Notes */}
-        <div className="absolute top-[75%] right-[20px] w-14 h-14 bg-[#511ae4] rounded-xl shadow-lg transform rotate-12 border border-white/20 flex flex-col items-center justify-center gap-1.5 transition-all duration-500 group-hover:rotate-45 group-hover:-translate-y-5 group-hover:scale-110">
+        <div className="absolute top-[75%] right-5 w-14 h-14 bg-[#511ae4] rounded-xl shadow-lg transform rotate-12 border border-white/20 flex flex-col items-center justify-center gap-1.5 transition-all duration-500 group-hover:rotate-45 group-hover:-translate-y-5 group-hover:scale-110">
           <div className="w-6 h-1 bg-white/50 rounded-full"></div>
           <div className="w-4 h-1 bg-white/80 rounded-full"></div>
           <div className="w-6 h-1 bg-white/50 rounded-full"></div>
         </div>
 
         {/* Priority Tiers Card */}
-        <div className="absolute top-[40%] left-[-20px] w-28 h-32 bg-white/95 backdrop-blur-md rounded-xl shadow-2xl transform rotate-[15deg] p-2 border border-white flex flex-col gap-1.5 transition-all duration-500 group-hover:rotate-0 group-hover:translate-x-4">
+        <div className="absolute top-[40%] -left-5 w-28 h-32 bg-white/95 backdrop-blur-md rounded-xl shadow-2xl transform rotate-15 p-2 border border-white flex flex-col gap-1.5 transition-all duration-500 group-hover:rotate-0 group-hover:translate-x-4">
           <div className="flex items-center justify-between px-1 mb-1">
             <div className="w-8 h-2 bg-slate-200 rounded-full"></div>
             <div className="w-3 h-3 rounded-full border-2 border-slate-300"></div>
           </div>
-          <div className="w-full flex-1 bg-gradient-to-r from-[#ff7e5f] to-[#ff9980] rounded-md relative overflow-hidden group-hover:flex-[1.2] transition-all duration-300">
+          <div className="w-full flex-1 bg-linear-to-r from-[#ff7e5f] to-[#ff9980] rounded-md relative overflow-hidden group-hover:flex-[1.2] transition-all duration-300">
             <div className="absolute left-0 top-0 bottom-0 w-1 bg-white/40"></div>
           </div>
           <div className="w-full h-6 bg-[#2d1b6e] rounded-md relative overflow-hidden"></div>
@@ -630,7 +630,7 @@ const ProgramSection = () => {
                 <div className="flex items-center gap-4 relative z-10">
                   {/* Circle text button visible on md+ screens */}
                   <div
-                    className={`hidden md:flex w-[72px] h-[72px] rounded-full border items-center justify-center transition-colors bg-white ${
+                    className={`hidden md:flex w-18 h-18 rounded-full border items-center justify-center transition-colors bg-white ${
                       openModule === mod.id
                         ? "border-[#a4e678]"
                         : "border-slate-300 hover:border-[#a4e678] hover:bg-[#a4e678]/10"
@@ -702,7 +702,7 @@ const ProgramSection = () => {
                 strokeWidth="2.5"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className="-mr-[1px]"
+                className="-mr-px"
               >
                 <path d="M5 12h14"></path>
                 <path d="m12 5 7 7-7 7"></path>

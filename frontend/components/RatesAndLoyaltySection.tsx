@@ -53,7 +53,7 @@ const RatesAndLoyaltySection = () => {
   ];
 
   return (
-    <section className="relative w-full bg-[#fdfdfd] py-24 overflow-hidden border-t border-slate-100">
+    <section className="relative w-full bg-[#fdfdfd] py-24 pt-34 overflow-hidden border-t border-slate-100">
       <div className="max-w-6xl mx-auto px-6 lg:px-8 relative z-20">
         
         {/* Header Section for Rates */}
